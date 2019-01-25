@@ -1,6 +1,6 @@
-# BoPo Works
+# Body Positive Works - Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 
 ## Development server
 
@@ -18,5 +18,14 @@ websites@duncanpeach.com
 
 ## Agreed website & Flows
 
-./website_struture/BoPoMenu.pdf
-./website_struture/BoPoWorkswebsite.pdf
+[Menu](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/BoPoMenu.pdf)
+[WorkFlow](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/BoPoWorkswebsite.pdf)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Lucy Edge
+* Paul Sparkes
