@@ -18,12 +18,12 @@ websites@duncanpeach.com
 
 ## Agreed website & Flows
 
-[Menu](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/BoPoMenu.pdf)
-[WorkFlow](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/BoPoWorkswebsite.pdf)
+* [Menu](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/BoPoMenu.pdf)
+* [WorkFlow](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/BoPoWorkswebsite.pdf)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
