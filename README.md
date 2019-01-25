@@ -12,6 +12,11 @@ Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The 
 Run `npm run build` to build the project.
 
 
-## Further help 
+## Further help
 
 websites@duncanpeach.com
+
+## Agreed website & Flows
+
+./website_struture/BoPoMenu.pdf
+./website_struture/BoPoWorkswebsite.pdf
