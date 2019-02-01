@@ -1,6 +1,6 @@
 # Body Positive Works - Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
+We want this website to have a much more modern, clean, uncluttered sleek, and classy feel.  Duncan here is the example of site we spoke about.  An example:  soulflyte.com
 
 ## Development server
 
