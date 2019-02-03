@@ -1,10 +1,13 @@
 
 import { NgModule } from '@angular/core';
-import { BrowserModule, Title  } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/app.Header';
+
+
+import { SignupComponent } from './Footer/app.Signup';
 import { FooterComponent } from './Footer/app.Footer';
 import { NavComponent } from './Nav/app.Nav';
 import { PageNotFoundComponent } from './PageNotFound/app.PageNotFound';
@@ -25,6 +28,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FooterComponent,
     NavComponent,
     HomeComponent,
+    SignupComponent,
     PageNotFoundComponent
 
   ],

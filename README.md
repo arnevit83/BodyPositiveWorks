@@ -10,7 +10,7 @@ Run `npm run start` for a dev server. Navigate to `http://localhost:4200/`. The 
 ## Build
 
 Run `npm run build` to build the project.
-
+bug in Terser, npm i --save-exact --save terser@3.14
 
 ## Further help
 

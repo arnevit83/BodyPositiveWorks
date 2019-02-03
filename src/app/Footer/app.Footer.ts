@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'footer',
   templateUrl: './footer.html',
 })
 export class FooterComponent {
-    faChevronDown = faChevronUp;
+  faTwitter = faTwitter;
+  faFacebook = faFacebook;
+  faInstagram = faInstagram;
+  faGooglePlusG = faGooglePlusG;
 }

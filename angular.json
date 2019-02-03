@@ -37,8 +37,11 @@
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "src/assets/js/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/moment/min/moment.min.js",
+              "node_modules/material-kit/assets/js/plugins/bootstrap-datetimepicker.js",
+              "node_modules/material-kit/assets/js/core/bootstrap-material-design.min.js",
+              "node_modules/material-kit/assets/js/material-kit.js",
               "src/assets/js/main.js",
               "src/assets/js/onload.js",
             ]
@@ -96,11 +99,15 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/assets/css/styles.scss"
+              "src/assets/css/styles.scss",
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/popper.js/dist/umd/popper.js",
+              "node_modules/moment/min/moment.min.js",
+              "node_modules/material-kit/assets/js/plugins/bootstrap-datetimepicker.js",
+              "node_modules/material-kit/assets/js/core/bootstrap-material-design.min.js",
+              "node_modules/material-kit/assets/js/material-kit.js",
               "src/assets/js/main.js",
               "src/assets/js/onload.js",
             ],

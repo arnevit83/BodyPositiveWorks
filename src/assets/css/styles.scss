@@ -1,25 +1,332 @@
-//Imports
+//
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700'); //
+//// Core Bootstrap Variables
+//
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import '~bootstrap/scss/_spinners';
+$enable-flex: true; // fully adopt flexbox layouts
+$enable-shadows: true; // enable shadows, set to false to turn off shadows
+//// Variables for material-kit
+@import "~material-kit/assets/scss/material-kit/variables/colors";
+@import "~material-kit/assets/scss/material-kit/variables/shadow";
+@import "~material-kit/assets/scss/material-kit/variables/bootstrap-material-design-base";
+@import "~material-kit/assets/scss/material-kit/variables/custom-forms";
+@import "~material-kit/assets/scss/material-kit/variables/spacing";
+@import "~material-kit/assets/scss/material-kit/variables/body";
+@import "~material-kit/assets/scss/material-kit/variables/brand";
+@import "~material-kit/assets/scss/material-kit/variables/buttons";
+@import "~material-kit/assets/scss/material-kit/variables/card";
+@import "~material-kit/assets/scss/material-kit/variables/code";
+@import "~material-kit/assets/scss/material-kit/variables/dropdown";
+@import "~material-kit/assets/scss/material-kit/variables/forms";
+@import "~material-kit/assets/scss/material-kit/variables/list-group";
+@import "~material-kit/assets/scss/material-kit/variables/nav";
+@import "~material-kit/assets/scss/material-kit/variables/pagination";
+@import "~material-kit/assets/scss/material-kit/variables/state";
+@import "~material-kit/assets/scss/material-kit/variables/tables";
+@import "~material-kit/assets/scss/material-kit/variables/tooltip";
+@import "~material-kit/assets/scss/material-kit/variables/type";
+@import "~material-kit/assets/scss/material-kit/variables/modals";
+@import "~material-kit/assets/scss/material-kit/variables/menu";
+@import "~material-kit/assets/scss/material-kit/variables/drawer";
+@import "~material-kit/assets/scss/material-kit/variables/snackbar";
+@import "~material-kit/assets/scss/material-kit/variables/bootstrap-material-design";
+@import "~material-kit/assets/scss/material-kit/mixins";
+@import "~material-kit/assets/scss/material-kit/core-bootstrap";
+@import "~material-kit/assets/scss/material-kit/reboot"; // Core Components
+@import "~material-kit/assets/scss/material-kit/layout";
+@import "~material-kit/assets/scss/material-kit/buttons";
+@import "~material-kit/assets/scss/material-kit/misc";
+@import "~material-kit/assets/scss/material-kit/checkboxes";
+@import "~material-kit/assets/scss/material-kit/custom-forms";
+@import "~material-kit/assets/scss/material-kit/switches";
+@import "~material-kit/assets/scss/material-kit/radios";
+@import "~material-kit/assets/scss/material-kit/carousel";
+@import "~material-kit/assets/scss/material-kit/forms";
+@import "~material-kit/assets/scss/material-kit/input-group";
+@import "~material-kit/assets/scss/material-kit/list-group";
+@import "~material-kit/assets/scss/material-kit/nav";
+@import "~material-kit/assets/scss/material-kit/images";
+@import "~material-kit/assets/scss/material-kit/navbar";
+@import "~material-kit/assets/scss/material-kit/badges";
+@import "~material-kit/assets/scss/material-kit/alerts";
+@import "~material-kit/assets/scss/material-kit/pagination";
+@import "~material-kit/assets/scss/material-kit/pills";
+@import "~material-kit/assets/scss/material-kit/info-areas";
+@import "~material-kit/assets/scss/material-kit/type";
+@import "~material-kit/assets/scss/material-kit/tabs";
+@import "~material-kit/assets/scss/material-kit/tooltip";
+@import "~material-kit/assets/scss/material-kit/popover";
+@import "~material-kit/assets/scss/material-kit/modal";
+@import "~material-kit/assets/scss/material-kit/dropdown";
+@import "~material-kit/assets/scss/material-kit/drawer";
+@import "~material-kit/assets/scss/material-kit/progress";
+@import "~material-kit/assets/scss/material-kit/togglebutton";
+@import "~material-kit/assets/scss/material-kit/ripples";
+@import "~material-kit/assets/scss/material-kit/headers";
+@import "~material-kit/assets/scss/material-kit/footers"; // Cards
+@import '~material-kit/assets/scss/material-kit/cards';
+@import '~material-kit/assets/scss/material-kit/cards/card-carousel';
+@import '~material-kit/assets/scss/material-kit/cards/card-login';
+@import '~material-kit/assets/scss/material-kit/cards/card-plain'; // Core Plugins
+@import '~material-kit/assets/scss/material-kit/plugins/plugin-datetime-picker';
+@import '~material-kit/assets/scss/material-kit/plugins/plugin-nouislider'; // Sections
+@import "~material-kit/assets/scss/material-kit/responsive"; //
+//// Overrides
+//
 
-@import '~bootstrap/scss/bootstrap-reboot';
-@import '~bootstrap/scss/bootstrap-grid';
-@import '~bootstrap/scss/_transitions';
-@import '~bootstrap/scss/_nav';
-@import '~bootstrap/scss/_navbar';
-// @import '~bootstrap/scss/_utilities';
-// @import '~bootstrap/scss/_images';
-// @import '~bootstrap/scss/_list-group';
-// @import '~bootstrap/scss/_carousel';
-// @import '~bootstrap/scss/_spinners';
-// @import '~bootstrap/scss/_jumbotron';
-// @import '~bootstrap/scss/_tooltip';
-// @import '~bootstrap/scss/_card';
+a:focus,
+a:hover {
+  color: $pink-500;
+}
 
-//Sass Variables
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu a:active,
+.dropdown-menu a:focus,
+.dropdown-menu a:hover {
+  background-color: $pink-500;
+}
+////Nav Menu
+//
 
-$primary: #D52653;
-$secondary: #ad1f42;
-$sidebar-base-width: 17rem;
-$white: #FFFFFF;
-$defaultFont: 'Open Sans', sans-serif;
+.navbar-nav a {
+  display   : block!important;
+  text-align: center;
+}
 
-// Custom Css
+.dropdown-menu {
+  display: block;
+}
+@media (max-width: 1000px) {
+  .subbutton {
+    padding-top: 40px;
+  }
+
+  .copyright {
+    text-align: center;
+    float     : none!important;
+    font-size : 12px;
+  }
+}
+
+.nav-link {
+  font-size: 14px!important;
+}
+
+.nav-link fa-icon {
+  font-size: 1.25rem;
+}
+////Home Page
+//
+
+.page-header {
+  background-image       : url("~/assets/images/bg1.png");
+  -webkit-background-size: cover;
+  -moz-background-size   : cover;
+  -o-background-size     : cover;
+  background-size        : cover;
+  -webkit-transition     : background-image 0.8s ease-in;
+  transition             : background-image 0.8s ease-in;
+  background-color       : white!important;
+}
+
+.header-filter::before {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+// .section-components h6.description {
+//   margin-top   : 5px;
+//   margin-bottom: 30px;
+// }
+
+.page-header {
+  // height  : 90vh;
+  overflow: hidden;
+}
+
+.brand {
+  color     : $white-color;
+  text-align: center;
+
+  h1 {
+    font-weight: 600;
+    display    : inline-block;
+    position   : relative;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px #21272d24;
+  }
+
+  h3 {
+    margin     : 10px auto 0;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px #21272d24;
+    font-weight: 300;
+  }
+}
+
+h4.description {
+  font-size: 1.5em;
+}
+
+.section {
+  padding: 70px 0;
+}
+//
+//// Scroll Up button
+//
+
+.ScrollUp:hover {
+  color : #ffffff;
+  cursor: pointer;
+}
+
+.ScrollUp {
+  display              : none;
+  width                : 30px;
+  height               : 30px;
+  position             : fixed;
+  right                : 40px;
+  bottom               : 10px;
+  color                : #ffffff77;
+  background-color     : #343a40;
+  text-shadow          : 1px 1px #21272d77;
+  padding              : 7px;
+  line-height          : 1px;
+  -moz-border-radius   : 6px;
+  -webkit-border-radius: 6px;
+  border-radius        : 6px;
+  /* future proofing */
+  -khtml-border-radius : 6px;
+  /* for old Konqueror browsers */
+  z-index              : 3;
+}
+@media (max-width: 830px) {
+  .ScrollUp {
+    right: 20px;
+  }
+}
+////FooterComponent
+//
+
+.footer-black {
+  background     : #232323;
+  background     : radial-gradient(ellipse at center,#585858 0,#232323 100%);
+  background-size: 550% 450%;
+}
+
+.footer-big {
+  padding: 1.875rem 0;
+}
+
+.footer-black a {
+  color  : #fff;
+  opacity: 0.70;
+}
+
+.footer-black a:hover,
+a:active {
+  opacity: 1!important;
+  cursor : pointer;
+}
+
+.footer-black .copyright,
+.footer-black .footer-brand,
+.footer-black .footer-brand:focus,
+.footer-black .footer-brand:hover,
+.footer-black h4,
+.footer-black h5,
+.footer-black i {
+  color: #fff;
+}
+
+.copyright {
+  font-size: 12px;
+  display  : block;
+  width    : 220px;
+}
+
+.feed-line {
+  color: white;
+}
+
+.feed-line fa-icon {
+  color        : white;
+  font-size    : 1.15rem;
+  margin-bottom: 10px;
+  display      : inline-block;
+  margin-right : 10px;
+}
+
+.footer-big .content {
+  text-align: left;
+}
+
+.card-title,
+.footer-big h4,
+.footer-big h5,
+.footer-brand,
+.info-title,
+.media .media-heading,
+.title {
+  font-family: 'Roboto', sans-serif!important;
+}
+
+.footer-big .social-feed p {
+  display       : table-cell;
+  vertical-align: top;
+  overflow      : hidden;
+  padding-bottom: 10px;
+  max-width     : 300px;
+}
+
+.card-description,
+.description,
+.footer-big p {
+  color: #cfcfcf;
+}
+
+.subscribe-line {
+  color           : white;
+  background-color: #808080;
+  background      : radial-gradient(ellipse at center, #666666 0, #808080 100%);
+}
+
+.subscribe-line .form-control {
+  box-shadow: none;
+}
+
+.subscribe-line .title {
+  color: white;
+}
+
+.subscribe-line fa-icon {
+  font-size: 1.5rem;
+}
+
+.subscribe-line .bmd-form-group {
+  position   : relative;
+  padding-top: 8px;
+  display    : block;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+footer {
+  font-family: 'Roboto', sans-serif;
+}
+/////////////////////
+// .colored-shadow {
+//     transform: scale(.94);
+//     top: 12px;
+//     filter: blur(12px);
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     background-size: cover;
+//     z-index: -1;
+//     transition: opacity .45s;
+//     opacity: 0;
+// }
