@@ -88,6 +88,128 @@ a:hover {
 .dropdown-menu a:hover {
   background-color: $pink-500;
 }
+////Slider images
+//
+//Calculator for CSS only Banner timings
+//https://docs.google.com/spreadsheets/d/1F4odaBXJpM4OZTCBEod4QiS2xI_9wg_EqAUwI7A6JGQ/edit#gid=587373791
+//
+
+#SliderBanner picture {
+  position                         : absolute;
+  left                             : 0;
+  -webkit-animation-name           : cf4FadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration       : 44s;
+  -moz-animation-name              : cf4FadeInOut;
+  -moz-animation-timing-function   : ease-in-out;
+  -moz-animation-iteration-count   : infinite;
+  -moz-animation-duration          : 44s;
+  -o-animation-name                : cf4FadeInOut;
+  -o-animation-timing-function     : ease-in-out;
+  -o-animation-iteration-count     : infinite;
+  -o-animation-duration            : 44s;
+  animation-name                   : cf4FadeInOut;
+  animation-timing-function        : ease-in-out;
+  animation-iteration-count        : infinite;
+  animation-duration               : 44s;
+  width                            : 100%;
+  height                           : 100%;
+  -o-object-fit                    : cover;
+  object-fit                       : cover;
+}
+
+#SliderBanner picture img {
+  width        : 100%;
+  height       : 100%;
+  -o-object-fit: cover;
+  object-fit   : cover;
+}
+
+#SliderBanner {}
+@-webkit-keyframes cf4FadeInOut {
+  0%,
+  100%,
+  18.1% {
+    opacity: 1;
+  }
+
+  20%,
+  98.18% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes cf4FadeInOut {
+  0%,
+  100%,
+  18.1% {
+    opacity: 1;
+  }
+
+  20%,
+  98.18% {
+    opacity: 0;
+  }
+}
+@-o-keyframes cf4FadeInOut {
+  0%,
+  100%,
+  18.1% {
+    opacity: 1;
+  }
+
+  20%,
+  98.18% {
+    opacity: 0;
+  }
+}
+@keyframes cf4FadeInOut {
+  0%,
+  100%,
+  18.1% {
+    opacity: 1;
+  }
+
+  20%,
+  98.18% {
+    opacity: 0;
+  }
+}
+
+#SliderBanner picture:nth-of-type(1) {
+  -webkit-animation-delay: 35.2s;
+  -moz-animation-delay   : 35.2s;
+  -o-animation-delay     : 35.2s;
+  animation-delay        : 35.2s;
+}
+
+#SliderBanner picture:nth-of-type(2) {
+  -webkit-animation-delay: 26.4s;
+  -moz-animation-delay   : 26.4s;
+  -o-animation-delay     : 26.4s;
+  animation-delay        : 26.4s;
+}
+
+#SliderBanner picture:nth-of-type(3) {
+  -webkit-animation-delay: 17.6s;
+  -moz-animation-delay   : 17.6s;
+  -o-animation-delay     : 17.6s;
+  animation-delay        : 17.6s;
+}
+
+#SliderBanner picture:nth-of-type(4) {
+  -webkit-animation-delay: 8.8s;
+  -moz-animation-delay   : 8.8s;
+  -o-animation-delay     : 8.8s;
+  animation-delay        : 8.8s;
+}
+
+#SliderBanner picture:nth-of-type(5) {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay   : 0;
+  -o-animation-delay     : 0;
+  animation-delay        : 0;
+}
 ////Nav Menu
 //
 
@@ -106,6 +228,7 @@ a:hover {
 
   .copyright {
     text-align: center;
+    margin    : 0 auto;
     float     : none!important;
     font-size : 12px;
   }
@@ -121,28 +244,17 @@ a:hover {
 ////Home Page
 //
 
-.page-header {
-  background-image       : url("~/assets/images/bg1.png");
-  -webkit-background-size: cover;
-  -moz-background-size   : cover;
-  -o-background-size     : cover;
-  background-size        : cover;
-  -webkit-transition     : background-image 0.8s ease-in;
-  transition             : background-image 0.8s ease-in;
-  background-color       : white!important;
-}
-
 .header-filter::before {
   background: rgba(0, 0, 0, 0.3) !important;
 }
-// .section-components h6.description {
-//   margin-top   : 5px;
-//   margin-bottom: 30px;
-// }
 
 .page-header {
-  // height  : 90vh;
+  height  : 90vh;
   overflow: hidden;
+}
+
+.navbar-translate a .ripple-container {
+  display: none;
 }
 
 .brand {
@@ -280,6 +392,20 @@ a:active {
   max-width     : 300px;
 }
 
+.footer-black hr {
+  border-color: hsla(0,0%,100%,.2);
+}
+
+.IGFeed img {
+  width        : 20%;
+  margin-right : 5%;
+  margin-bottom: 5%;
+  float        : left;
+  border-radius: 6px !important;
+  box-shadow   : 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  height       : 25%;
+}
+
 .card-description,
 .description,
 .footer-big p {
@@ -317,16 +443,20 @@ h3 {
 footer {
   font-family: 'Roboto', sans-serif;
 }
-/////////////////////
+
+footer ul {
+  margin-bottom: 10px!important;
+}
+//Something to try later
 // .colored-shadow {
-//     transform: scale(.94);
-//     top: 12px;
-//     filter: blur(12px);
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     background-size: cover;
-//     z-index: -1;
-//     transition: opacity .45s;
-//     opacity: 0;
+//   transform      : scale(.94);
+//   top            : 12px;
+//   filter: blur(12px);
+//   position       : absolute;
+//   width          : 100%;
+//   height         : 100%;
+//   background-size: cover;
+//   z-index        : -1;
+//   transition     : opacity 0.45s;
+//   opacity        : 0;
 // }
