@@ -1,6 +1,6 @@
 //
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700'); //
-//// Core Bootstrap Variables
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url("https://use.typekit.net/vre2bou.css"); //// Core Bootstrap Variables
 //
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -75,6 +75,10 @@ $enable-shadows: true; // enable shadows, set to false to turn off shadows
 @import "~material-kit/assets/scss/material-kit/responsive"; //
 //// Overrides
 //
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 
 a:focus,
 a:hover {
@@ -249,7 +253,7 @@ a:hover {
 }
 
 .page-header {
-  height  : 90vh;
+  height  : 100vh;
   overflow: hidden;
 }
 
@@ -262,18 +266,20 @@ a:hover {
   text-align: center;
 
   h1 {
-    font-weight: 600;
     display    : inline-block;
     position   : relative;
-    font-family: 'Roboto', sans-serif;
+    font-family: proxima-nova-condensed,sans-serif;
+    font-weight: 700;
+    font-style : normal;
     text-shadow: 1px 1px #21272d24;
   }
 
   h3 {
     margin     : 10px auto 0;
-    font-family: 'Roboto', sans-serif;
-    text-shadow: 1px 1px #21272d24;
+    font-family: proxima-nova, sans-serif;
     font-weight: 300;
+    font-style : normal;
+    text-shadow: 1px 1px #21272d24;
   }
 }
 
@@ -322,9 +328,8 @@ h4.description {
 //
 
 .footer-black {
-  background     : #232323;
-  background     : radial-gradient(ellipse at center,#585858 0,#232323 100%);
-  background-size: 550% 450%;
+  color           : #3C4858;
+  background-color: white;
 }
 
 .footer-big {
@@ -332,8 +337,8 @@ h4.description {
 }
 
 .footer-black a {
-  color  : #fff;
-  opacity: 0.70;
+  color  : #3C4858;
+  opacity: 0.80;
 }
 
 .footer-black a:hover,
@@ -349,13 +354,14 @@ a:active {
 .footer-black h4,
 .footer-black h5,
 .footer-black i {
-  color: #fff;
+  color: #3C4858;
 }
 
 .copyright {
   font-size: 12px;
   display  : block;
-  width    : 220px;
+  width    : 240px;
+  padding  : 12px 0 !important;
 }
 
 .feed-line {
@@ -363,7 +369,7 @@ a:active {
 }
 
 .feed-line fa-icon {
-  color        : white;
+  color        : #e91e63;
   font-size    : 1.15rem;
   margin-bottom: 10px;
   display      : inline-block;
@@ -381,7 +387,7 @@ a:active {
 .info-title,
 .media .media-heading,
 .title {
-  font-family: 'Roboto', sans-serif!important;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .footer-big .social-feed p {
@@ -393,7 +399,7 @@ a:active {
 }
 
 .footer-black hr {
-  border-color: hsla(0,0%,100%,.2);
+  border-color: #3C485822;
 }
 
 .IGFeed img {
@@ -409,13 +415,11 @@ a:active {
 .card-description,
 .description,
 .footer-big p {
-  color: #cfcfcf;
+  color: #3C4858;
 }
 
 .subscribe-line {
-  color           : white;
-  background-color: #808080;
-  background      : radial-gradient(ellipse at center, #666666 0, #808080 100%);
+  color: #3C4858;
 }
 
 .subscribe-line .form-control {
@@ -423,7 +427,7 @@ a:active {
 }
 
 .subscribe-line .title {
-  color: white;
+  color: #3C4858;
 }
 
 .subscribe-line fa-icon {
@@ -437,11 +441,13 @@ a:active {
 }
 
 h3 {
-  font-family: 'Roboto', sans-serif;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300;
+  font-style : normal;
 }
 
 footer {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 footer ul {
