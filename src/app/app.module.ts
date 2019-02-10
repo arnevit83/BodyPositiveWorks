@@ -39,13 +39,13 @@ import { NegativeBodyImageComponent } from './ContentArea/Expertise/negative-bod
 import { PricingAndBundlesComponent } from './ContentArea/Pricing/pricing-and-bundles/pricing-and-bundles.component';
 import { RentOurSpaceComponent } from './ContentArea/Pricing/rent-our-space/rent-our-space.component';
 
-import { ContactUsComponent } from './ContentArea/AboutUs/contact-us/contact-us.component';
-import { FoundersBiosComponent } from './ContentArea/AboutUs/founders-bios/founders-bios.component';
-import { OurMissionComponent } from './ContentArea/AboutUs/our-mission/our-mission.component';
-import { TestimonialsComponent } from './ContentArea/AboutUs/testimonials/testimonials.component';
+import { ContactUsComponent } from './ContentArea/Aboutus/contact-us/contact-us.component';
+import { FoundersBiosComponent } from './ContentArea/Aboutus/founders-bios/founders-bios.component';
+import { OurMissionComponent } from './ContentArea/Aboutus/our-mission/our-mission.component';
+import { TestimonialsComponent } from './ContentArea/Aboutus/testimonials/testimonials.component';
 
-import { OutreachComponent } from './ContentArea/outreach/outreach.component';
-import { CommunityComponent } from './ContentArea/community/community.component';
+import { OutreachComponent } from './ContentArea/Outreach/outreach.component';
+import { CommunityComponent } from './ContentArea/Community/community.component';
 import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
 
 
@@ -82,7 +82,7 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
     OutreachComponent,
     CommunityComponent,
     DepressionExpertiseComponent,
-    ScheduleComponent
+    ScheduleComponent,
 
   ],
   imports: [
