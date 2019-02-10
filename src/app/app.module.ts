@@ -19,6 +19,35 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { YogaComponent } from './ContentArea/Services/yoga/yoga.component';
+import { ArtTherapyComponent } from './ContentArea/Services/art-therapy/art-therapy.component';
+import { AyurvedaComponent } from './ContentArea/Services/ayurveda/ayurveda.component';
+import { ChiropracticComponent } from './ContentArea/Services/chiropractic/chiropractic.component';
+import { DepressionComponent } from './ContentArea/Services/depression/depression.component';
+import { MeditationComponent } from './ContentArea/Services/meditation/meditation.component';
+import { NutritionComponent } from './ContentArea/Services/nutrition/nutrition.component';
+import { PilatesComponent } from './ContentArea/Services/pilates/pilates.component';
+import { TherapyComponent } from './ContentArea/Services/therapy/therapy.component';
+import { ReikiComponent } from './ContentArea/Services/reiki/reiki.component';
+
+import { AddictionComponent } from './ContentArea/Expertise/addiction/addiction.component';
+import { DepressionExpertiseComponent } from './ContentArea/Expertise/depression/depression.component';
+import { AnxietyComponent } from './ContentArea/Expertise/anxiety/anxiety.component';
+import { EatingDisordersComponent } from './ContentArea/Expertise/eating-disorders/eating-disorders.component';
+import { NegativeBodyImageComponent } from './ContentArea/Expertise/negative-body-image/negative-body-image.component';
+
+import { PricingAndBundlesComponent } from './ContentArea/Pricing/pricing-and-bundles/pricing-and-bundles.component';
+import { RentOurSpaceComponent } from './ContentArea/Pricing/rent-our-space/rent-our-space.component';
+
+import { ContactUsComponent } from './ContentArea/AboutUs/contact-us/contact-us.component';
+import { FoundersBiosComponent } from './ContentArea/AboutUs/founders-bios/founders-bios.component';
+import { OurMissionComponent } from './ContentArea/AboutUs/our-mission/our-mission.component';
+import { TestimonialsComponent } from './ContentArea/AboutUs/testimonials/testimonials.component';
+
+import { OutreachComponent } from './ContentArea/outreach/outreach.component';
+import { CommunityComponent } from './ContentArea/community/community.component';
+import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
+
 
 
 @NgModule({
@@ -29,7 +58,31 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavComponent,
     HomeComponent,
     SignupComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    YogaComponent,
+    ArtTherapyComponent,
+    AyurvedaComponent,
+    ChiropracticComponent,
+    DepressionComponent,
+    MeditationComponent,
+    NutritionComponent,
+    PilatesComponent,
+    TherapyComponent,
+    ReikiComponent,
+    AddictionComponent,
+    AnxietyComponent,
+    EatingDisordersComponent,
+    NegativeBodyImageComponent,
+    PricingAndBundlesComponent,
+    RentOurSpaceComponent,
+    ContactUsComponent,
+    FoundersBiosComponent,
+    OurMissionComponent,
+    TestimonialsComponent,
+    OutreachComponent,
+    CommunityComponent,
+    DepressionExpertiseComponent,
+    ScheduleComponent
 
   ],
   imports: [

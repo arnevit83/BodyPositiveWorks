@@ -1,8 +1,10 @@
-<header></header>
-<nav class="navbar navbar-default fixed-top navbar-expand-lg" color-on-scroll="100"></nav>
-<div class="main main-raised">
-<router-outlet></router-outlet>
-<button class="btn btn-rose btn-sm ScrollUp">  <fa-icon [icon]="faChevronDown"></fa-icon><div class="ripple-container"></div></button>
+<div [ngClass]="bgClass">
+  <header></header>
+  <nav class="navbar navbar-default fixed-top navbar-expand-lg" color-on-scroll="100"></nav>
+    <div class="main main-raised" >
+    <router-outlet></router-outlet>
+    <button class="btn btn-rose btn-sm ScrollUp">  <fa-icon [icon]="faChevronDown"></fa-icon><div class="ripple-container"></div></button>
+    </div>
+  <Signup></Signup>
+  <footer class="footer footer-black footer-big"></footer>
 </div>
-<Signup></Signup>
-<footer class="footer footer-black footer-big"></footer>
