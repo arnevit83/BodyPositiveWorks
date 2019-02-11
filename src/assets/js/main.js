@@ -2,6 +2,26 @@
 
 $(document).ready(function() {
 
+  function CloseMobilemenu() {
+    $('html').removeClass('nav-open');
+    materialKit.misc.navbar_menu_visible = 0;
+    $('#bodyClick').remove();
+    setTimeout(function() {
+      $toggle.removeClass('toggled');
+    }, 550);
+
+    $('html').removeClass('nav-open-absolute');
+  }
+
+  $(".dropdown-item").click(function(event) {
+    CloseMobilemenu();
+  });
+  $(".mobile-close").click(function(event) {
+    CloseMobilemenu();
+  });
+
+
+
   $('.ScrollUp').click(function() {
     $('html, body').animate({
       scrollTop: 0

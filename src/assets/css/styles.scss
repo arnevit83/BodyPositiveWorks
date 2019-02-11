@@ -121,7 +121,7 @@ a:hover {
   height                           : 100%;
   -o-object-fit                    : cover;
   object-fit                       : cover;
-  top: 0px;
+  top                              : 0;
 }
 
 #SliderBanner picture img {
@@ -215,6 +215,12 @@ a:hover {
   -o-animation-delay     : 0;
   animation-delay        : 0;
 }
+
+.Home #SliderBanner picture img {
+  height: 100%!important;
+}
+
+.Home #SliderBanner picture:nth-of-type(5) img {}
 ////Nav Menu
 //
 
@@ -254,7 +260,12 @@ a:hover {
 }
 
 .page-header {
-  height  : 100vh;
+  height  : 60vh;
+  overflow: hidden;
+}
+
+.Home .page-header {
+  height  : 100vh!important;
   overflow: hidden;
 }
 
@@ -267,7 +278,7 @@ a:hover {
   text-align: center;
 
   h1 {
-    display    : inline-block;
+    display    : inline-bl ock;
     position   : relative;
     font-family: proxima-nova-condensed,sans-serif;
     font-weight: 700;
@@ -453,6 +464,10 @@ footer {
 
 footer ul {
   margin-bottom: 10px!important;
+}
+
+.main-raised {
+  min-height: 1000px;
 }
 //Something to try later
 // .colored-shadow {
