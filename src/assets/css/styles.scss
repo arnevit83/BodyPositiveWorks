@@ -220,7 +220,15 @@ a:hover {
   height: 100%!important;
 }
 
+.Home .brand h3 {
+  display: block!important;
+}
+
 .Home #SliderBanner picture:nth-of-type(5) img {}
+
+.Home .header-filter::before {
+  background: rgba(0, 0, 0, 0.15) !important;
+}
 ////Nav Menu
 //
 
@@ -255,12 +263,19 @@ a:hover {
 ////Home Page
 //
 
+.section-tabs {
+  background: #EEEEEE;
+}
+
 .header-filter::before {
-  background: rgba(0, 0, 0, 0.15) !important;
+  background        : rgba(0, 0, 0, .5) !important;
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition    : background-color 500ms linear;
+  transition        : background-color 500ms linear;
 }
 
 .page-header {
-  height  : 60vh;
+  height  : 50vh;
   overflow: hidden;
 }
 
@@ -278,12 +293,13 @@ a:hover {
   text-align: center;
 
   h1 {
-    display    : inline-bl ock;
-    position   : relative;
-    font-family: proxima-nova-condensed,sans-serif;
-    font-weight: 700;
-    font-style : normal;
-    text-shadow: 1px 1px #21272d24;
+    display       : inline-bl ock;
+    position      : relative;
+    font-family   : proxima-nova-condensed,sans-serif;
+    font-weight   : 700;
+    font-style    : normal;
+    text-shadow   : 1px 1px #21272d24;
+    text-transform: uppercase;
   }
 
   h3 {
@@ -292,6 +308,7 @@ a:hover {
     font-weight: 300;
     font-style : normal;
     text-shadow: 1px 1px #21272d24;
+    display    : none;
   }
 }
 

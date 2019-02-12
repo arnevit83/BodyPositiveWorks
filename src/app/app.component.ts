@@ -18,7 +18,7 @@ export class AppComponent {
       if (event instanceof NavigationEnd) {
         const eventUrl = /(?<=\/).+/.exec(event.urlAfterRedirects);
         const currentRoute = (eventUrl || ['Home']).join()
-        this.bgClass = currentRoute;
+        this.bgClass = currentRoute.replace('-', '').replace('/', '')
       }
     });
   }
