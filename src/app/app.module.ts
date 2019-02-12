@@ -15,7 +15,7 @@ import { PageNotFoundComponent } from './PageNotFound/app.PageNotFound';
 import { HomeComponent } from './ContentArea/app.Home';
 
 
-import { ServiceWorkerModule } from '@angular/service-worker';
+// import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -89,7 +89,7 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [Title],
   bootstrap: [AppComponent]
