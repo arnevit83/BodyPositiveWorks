@@ -25,18 +25,32 @@ $(document).ready(function() {
   $('.ScrollUp').click(function() {
     $('html, body').animate({
       scrollTop: 0
-    }, 'slow');
+    }, 'fast');
     $('.ScrollUp').fadeIn();
     return false;
   });
 
   $(window).on("scroll", function() {
-    if ($(window).scrollTop() > 800) {
+    if ($(window).scrollTop() > 400) {
       $('.ScrollUp').fadeIn();
+
+
+      if($(window).scrollTop() + $(window).height() > $(document).height() - 500) {
+
+
+   $('#vertical-nav').fadeOut("fast");
+
+       } else {
+
+     $('#vertical-nav').fadeIn();
+
+       }
+
+
 
     } else {
       $('.ScrollUp').fadeOut();
-
+   $('#vertical-nav').fadeOut("fast");
     }
   });
 

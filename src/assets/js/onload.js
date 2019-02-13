@@ -9,7 +9,7 @@ jQuery.fn.spectragram.accessData = {
 };
 jQuery(document).ready(function($){
 	var contentSections = $('.cd-section'),
-		navigationItems = $('#cd-vertical-nav a');
+		navigationItems = $('#vertical-nav a');
 		headerNavigationItems = $('#headerNavigationItems a');
 
 	updateNavigation();
@@ -37,18 +37,18 @@ jQuery(document).ready(function($){
 
     //open-close navigation on touch devices
     $('.touch .cd-nav-trigger').on('click', function(){
-    	$('.touch #cd-vertical-nav').toggleClass('open');
+    	$('.touch #vertical-nav').toggleClass('open');
 
     });
     //close navigation on touch devices when selectin an elemnt from the list
-    $('.touch #cd-vertical-nav a').on('click', function(){
-    	$('.touch #cd-vertical-nav').removeClass('open');
+    $('.touch #vertical-nav a').on('click', function(){
+    	$('.touch #vertical-nav').removeClass('open');
     });
 
 	function updateNavigation() {
 		contentSections.each(function(){
 			$this = $(this);
-			var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
+			var activeSection = $('#vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
 			if ( ( $this.offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $this.offset().top + $this.height() - $(window).height()/2 > $(window).scrollTop() ) ) {
 				navigationItems.eq(activeSection).addClass('is-selected');
 			}else {
@@ -59,7 +59,7 @@ jQuery(document).ready(function($){
 
 	function smoothScroll(target) {
         $('body,html').animate(
-        	{'scrollTop':target.offset().top - 90},
+        	{'scrollTop':target.offset().top - 120},
         	900
         );
 	}

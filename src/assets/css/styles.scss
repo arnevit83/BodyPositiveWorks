@@ -260,6 +260,111 @@ a:hover {
 .nav-link fa-icon {
   font-size: 1.25rem;
 }
+//// Right scroll nav
+
+
+#vertical-nav {
+  position         : fixed;
+  right            : -150px;
+  top              : 50%;
+  bottom           : auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform   : translateY(-50%);
+  -ms-transform    : translateY(-50%);
+  -o-transform     : translateY(-50%);
+  transform        : translateY(-50%);
+  z-index          : 4;
+  display: none;
+}
+
+#vertical-nav li {
+  text-align: right;
+}
+
+#vertical-nav a {
+  display                    : inline-block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility        : hidden;
+  width                      : 100%;
+}
+
+a {
+  color: #e91e63;
+}
+
+#vertical-nav a.is-selected .cd-dot,
+#vertical-nav a:hover span {
+  -webkit-transform: scale(1);
+  -moz-transform   : scale(1);
+  -ms-transform    : scale(1);
+  -o-transform     : scale(1);
+  transform        : scale(1);
+}
+
+#vertical-nav .cd-dot {
+  position                : relative;
+  top                     : 8px;
+  right                   : calc(100% - 15px);
+  height                  : 10px;
+  width                   : 10px;
+  border-radius           : 50%;
+  background-color        : #e91e63;
+  -webkit-transition      : -webkit-transform 0.2s, background-color 0.5s;
+  -moz-transition         : -moz-transform 0.2s, background-color 0.5s;
+  transition              : transform 0.2s, background-color 0.5s;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin   : 50% 50%;
+  -ms-transform-origin    : 50% 50%;
+  -o-transform-origin     : 50% 50%;
+  transform-origin        : 50% 50%;
+}
+
+#vertical-nav a span {
+  float            : right;
+  display          : inline-block;
+  -webkit-transform: scale(0.6);
+  -moz-transform   : scale(0.6);
+  -ms-transform    : scale(0.6);
+  -o-transform     : scale(0.6);
+  transform        : scale(0.6);
+}
+.cd-section{
+  min-height: 450px;
+}
+#vertical-nav .cd-label {
+  position                : relative;
+  margin-right            : 10px;
+  padding                 : 4px 14px;
+  color                   : white;
+  background              : rgba(0, 0, 0, 0.53);
+  font-size               : 10px;
+  border-radius           : 20px;
+  text-transform          :  capitalize;
+  font-weight             : 600;
+  opacity                 : 0;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin   : 100% 50%;
+  -ms-transform-origin    : 100% 50%;
+  -o-transform-origin     : 100% 50%;
+  transform-origin        : 100% 50%;
+}
+
+
+#vertical-nav a:hover .cd-label {
+  opacity           : 1;
+  left              : -100%;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition   : -moz-transform 0.2s, opacity 0.2s;
+  transition        : transform 0.2s, opacity 0.2s;
+}
+
+
+#vertical-nav ul {
+  list-style: none;
+  padding   : 0;
+}
+
+
 ////Home Page
 //
 
