@@ -13,22 +13,20 @@
           </div>
           <div class="card card-raised card-form-horizontal">
             <div class="card-body">
-              <form method="" action="">
+              <form type="POST" action="https://hooks.zapier.com/hooks/catch/4487884/p9arvz/" id="emailsignup">
                 <div class="row">
                   <div class="col-sm-8">
                     <span class="bmd-form-group has-rose"><div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text">
                               <fa-icon [icon]="faEnvelope"></fa-icon>
-
-
                         </span>
                       </div>
-                      <input type="text" class="form-control $line-color" placeholder="Your Email...">
+                      <input type="email" name="emailsignupemail"  id="emailsignupemail"  type="text" class="form-control $line-color" placeholder="Your Email...">
                     </div></span>
                   </div>
                   <div class="col-sm-4">
-                    <button type="button" class="btn btn-rose btn-block">Subscribe</button>
+                    <button  class="btn btn-rose btn-block" type="submit" value="button" id="emailsignupbutton">Subscribe</button>
                   </div>
                 </div>
               </form>

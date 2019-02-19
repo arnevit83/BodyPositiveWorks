@@ -386,29 +386,6 @@ a {
   display: none;
 }
 
-.brand {
-  color     : $white-color;
-  text-align: center;
-
-  h1 {
-    display       : inline-bl ock;
-    position      : relative;
-    font-family   : proxima-nova-condensed,sans-serif;
-    font-weight   : 700;
-    font-style    : normal;
-    text-shadow   : 1px 1px #21272d24;
-    text-transform: uppercase;
-  }
-
-  h3 {
-    margin     : 10px auto 0;
-    font-family: proxima-nova, sans-serif;
-    font-weight: 300;
-    font-style : normal;
-    text-shadow: 1px 1px #21272d24;
-  }
-}
-
 h4.description {
   font-size: 1.5em;
 }
@@ -456,6 +433,10 @@ h4.description {
   font-weight: 300;
   font-family: 'Open Sans', sans-serif;
   font-size  : 14px;
+}
+
+.modal {
+  overflow-y: auto;
 }
 
 .modal-backdrop {
@@ -635,4 +616,48 @@ footer ul {
 
 .card-title {
   bottom: -2px!important;
+}
+
+.h2fix {
+  font-size    : 2.25rem;
+  line-height  : 1.5em;
+  margin-top   : 20px;
+  margin-bottom: 10px;
+}
+
+.h4fix {
+  font-size    : 1.125rem;
+  line-height  : 1.5em;
+  margin-top   : 20px;
+  margin-bottom: 10px;
+}
+
+.h1Fix {
+  display       : inline-block;
+  position      : relative;
+  font-family   : proxima-nova-condensed,sans-serif;
+  font-weight   : 700;
+  font-style    : normal;
+  text-shadow   : 1px 1px #21272d24;
+  text-transform: uppercase;
+  font-size     : 3.3125rem;
+  line-height   : 1.15em;
+  color         : $white-color;
+  text-align    : center;
+  margin-top    : 20px;
+  margin-bottom : 10px;
+}
+
+.h2Fix {
+  margin       : 10px auto 0;
+  font-family  : proxima-nova, sans-serif;
+  font-weight  : 300;
+  font-style   : normal;
+  text-shadow  : 1px 1px #21272d24;
+  font-size    : 1.5625rem;
+  line-height  : 1.4em;
+  color        : $white-color;
+  text-align   : center;
+  margin-top   : 20px;
+  margin-bottom: 10px;
 }
