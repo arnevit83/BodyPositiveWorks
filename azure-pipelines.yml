@@ -18,5 +18,7 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
+    npm audit fix
+    ng config -g cli.warnings.versionMismatch false
     ng run build
   displayName: 'npm install and build'
