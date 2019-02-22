@@ -13,9 +13,12 @@ export class HeaderComponent {
     // Add the Route Class
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        const eventUrl = /(?<=\/).+/.exec(event.urlAfterRedirects);
-        const currentRoute = (eventUrl || ['THE FEEL GOOD PLACE']).join().replace('-', ' ').replace('-', ' ')
-        this.TitleText = currentRoute.split("/").slice(-1).toString();
+        const eventUrl = event.urlAfterRedirects.split(/[\s,]+/);
+        var currentRoute = (eventUrl || ['THE FEEL GOOD PLACE']).join().replace('-', ' ').replace('-', ' ')
+        if (currentRoute.split("/").slice(-1).toString() == ""){
+        currentRoute="THE FEEL GOOD PLACE";
+        }
+        this.TitleText =currentRoute.split("/").slice(-1).toString() ;
       }
     });
   }

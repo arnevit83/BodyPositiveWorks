@@ -16,9 +16,16 @@ export class AppComponent {
     // Add the Route Class
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        const eventUrl = /(?<=\/).+/.exec(event.urlAfterRedirects);
-        const currentRoute = (eventUrl || ['Home']).join()
-        this.bgClass = currentRoute.replace('-', '').replace('/', '')
+
+        const eventUrl = event.urlAfterRedirects.split(/[\s,]+/);
+        var currentRoute = (eventUrl || ['Home']).join().replace('-', ' ').replace('-', ' ')
+        if (currentRoute.split("/").slice(-1).toString() == ""){
+        currentRoute="Home";
+        }
+        this.bgClass =currentRoute.split("/").slice(-1).toString() ;
+
+
+
       }
     });
   }

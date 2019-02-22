@@ -5,6 +5,8 @@ $(document).ready(function() {
     return pattern.test(emailAddress);
   }
   $("#emailsignup").submit(function(e) {
+
+
     if (isValidEmailAddress($("#emailsignupemail").val())) {
 
       var form = $(this);
@@ -17,6 +19,8 @@ $(document).ready(function() {
           $("#emailsignupbutton").prop('disabled', true);
           $("#emailsignupbutton").html("Thank you!")
           $("#emailsignupemail").html("");
+
+
         }
       });
     } else {
