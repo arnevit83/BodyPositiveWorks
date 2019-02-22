@@ -237,8 +237,12 @@ a:hover {
   display: block;
 }
 @media (max-width: 1000px) {
+  #vertical-nav{
+    display: none!important;
+  }
   .subbutton {
-    padding-top: 40px;
+    padding: 40px 15px;
+
   }
 
   .copyright {
@@ -260,7 +264,7 @@ a:hover {
 
 #vertical-nav {
   position         : fixed;
-  right            : -150px;
+  right            : -135px;
   top              : 50%;
   bottom           : auto;
   -webkit-transform: translateY(-50%);
@@ -678,4 +682,8 @@ footer ul {
 .card-pricing .card-monthly {
   margin-top : -10px;
   font-weight: 500;
+}
+.navbar .dropdown.show .dropdown-menu, .navbar .dropdown .dropdown-menu{
+height:auto;
+
 }

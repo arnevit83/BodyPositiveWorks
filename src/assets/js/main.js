@@ -116,7 +116,7 @@ $(document).ready(function() {
 
 
   };
-
+CloseMobilemenu();
   function galleryfeedkFunc() {
 
     window.setTimeout(function() {
