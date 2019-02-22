@@ -13,7 +13,16 @@ export class ScheduleComponent implements OnInit {
 
   ngOnInit() {
     $(function(){
-    	$.getScript("https://widgets.healcode.com/javascripts/healcode.js", function() {  });
+
+
+
+
+      let doc = (<HTMLIFrameElement> document.getElementById('FileFrame')).contentDocument ;
+      doc.open();
+      doc.write('<script type="text/javascript" src="https://widgets.healcode.com/javascripts/healcode.js"></script>            <healcode-widget data-type="schedules" data-widget-partner="object" data-widget-id="9594621ad99" data-widget-version="1" >Loading...</healcode-widget>');
+      doc.close();
+
+
     });
 
 }
