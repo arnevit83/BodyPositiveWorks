@@ -85,6 +85,10 @@ a:hover {
   color: $pink-500;
 }
 
+.Yoga sub {
+  color: $pink-500;
+}
+
 .dropdown-menu .dropdown-item:focus,
 .dropdown-menu .dropdown-item:hover,
 .dropdown-menu a:active,
@@ -231,6 +235,10 @@ a:hover {
 .navbar-nav a {
   display   : block!important;
   text-align: center;
+}
+
+.nav-tabs .nav-item .nav-link {
+  font-size: 12px!important;
 }
 
 .dropdown-menu {
