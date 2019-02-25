@@ -102,6 +102,10 @@ a:hover {
 //https://docs.google.com/spreadsheets/d/1F4odaBXJpM4OZTCBEod4QiS2xI_9wg_EqAUwI7A6JGQ/edit#gid=587373791
 //
 
+.form-control {
+  box-shadow: none!important;
+}
+
 #SliderBanner picture {
   position                         : absolute;
   left                             : 0;
