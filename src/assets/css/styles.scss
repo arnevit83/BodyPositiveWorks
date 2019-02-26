@@ -700,3 +700,27 @@ footer ul {
 .navbar .dropdown.show .dropdown-menu {
   height: auto;
 }
+//Contact Us
+////
+
+.Contact .page-header picture {
+  display: none;
+}
+
+.Contact .no-webp .Contact .BackgroundReplacemnt {
+  background: url("/assets/images/bgContactUs.png") center center;
+}
+
+.webp .Contact .BackgroundReplacemnt {
+  background: url("/assets/images/bgContactUs.png") center center;
+}
+
+.Contact .BackgroundReplacemnt {
+  position     : absolute;
+  left         : 0;
+  width        : 100%;
+  height       : 100%;
+  -o-object-fit: cover;
+  object-fit   : cover;
+  top          : 0;
+}
