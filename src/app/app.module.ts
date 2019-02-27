@@ -47,6 +47,7 @@ import { TestimonialsComponent } from './ContentArea/Aboutus/testimonials/testim
 
 import { OutreachComponent } from './ContentArea/Outreach/outreach.component';
 import { CommunityComponent } from './ContentArea/Community/community.component';
+import { EventsComponent } from './ContentArea/Events/Events.component';
 import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
 
 
@@ -85,7 +86,7 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
     CommunityComponent,
     DepressionExpertiseComponent,
     ScheduleComponent,
-
+    EventsComponent,
   ],
   imports: [
     BrowserModule,

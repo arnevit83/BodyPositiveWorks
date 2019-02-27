@@ -35,6 +35,7 @@ import { FoundersBiosComponent } from './ContentArea/Aboutus/founders-bios/found
 import { OurMissionComponent } from './ContentArea/Aboutus/our-mission/our-mission.component';
 import { TestimonialsComponent } from './ContentArea/Aboutus/testimonials/testimonials.component';
 
+import { EventsComponent } from './ContentArea/Events/Events.component';
 import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
 
 
@@ -74,6 +75,7 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'About-Us/Our-Mission', component: OurMissionComponent },
 { path: 'About-Us/Testimonials', component: TestimonialsComponent },
 
+{ path: 'Events', component: EventsComponent },
 { path: 'Schedule', component: ScheduleComponent },
 
 
