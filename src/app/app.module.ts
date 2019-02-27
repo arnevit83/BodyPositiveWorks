@@ -23,11 +23,12 @@ import { YogaComponent } from './ContentArea/Services/yoga/yoga.component';
 import { ArtTherapyComponent } from './ContentArea/Services/art-therapy/art-therapy.component';
 import { AyurvedaComponent } from './ContentArea/Services/ayurveda/ayurveda.component';
 import { ChiropracticComponent } from './ContentArea/Services/chiropractic/chiropractic.component';
-import { DepressionComponent } from './ContentArea/Services/depression/depression.component';
+import { BodyworkComponent } from './ContentArea/Services/Bodywork/Bodywork.component';
 import { MeditationComponent } from './ContentArea/Services/meditation/meditation.component';
+import { MassageComponent } from './ContentArea/Services/Massage/Massage.component';
 import { NutritionComponent } from './ContentArea/Services/nutrition/nutrition.component';
 import { PilatesComponent } from './ContentArea/Services/pilates/pilates.component';
-import { TherapyComponent } from './ContentArea/Services/therapy/therapy.component';
+import { PsychotherapyComponent } from './ContentArea/Services/Psychotherapy/Psychotherapy.component';
 import { ReikiComponent } from './ContentArea/Services/reiki/reiki.component';
 
 import { AddictionComponent } from './ContentArea/Expertise/addiction/addiction.component';
@@ -63,11 +64,11 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
     ArtTherapyComponent,
     AyurvedaComponent,
     ChiropracticComponent,
-    DepressionComponent,
+    BodyworkComponent,
     MeditationComponent,
     NutritionComponent,
     PilatesComponent,
-    TherapyComponent,
+    PsychotherapyComponent,
     ReikiComponent,
     AddictionComponent,
     AnxietyComponent,
@@ -75,6 +76,7 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
     NegativeBodyImageComponent,
     PricingAndBundlesComponent,
     RentOurSpaceComponent,
+    MassageComponent,
     ContactUsComponent,
     FoundersBiosComponent,
     OurMissionComponent,

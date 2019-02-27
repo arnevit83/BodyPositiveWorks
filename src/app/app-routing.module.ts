@@ -6,12 +6,13 @@ import { PageNotFoundComponent } from './PageNotFound/app.PageNotFound';
 
 
 import { YogaComponent } from './ContentArea/Services/yoga/yoga.component';
-import { TherapyComponent } from './ContentArea/Services/therapy/therapy.component';
+import { PsychotherapyComponent } from './ContentArea/Services/Psychotherapy/Psychotherapy.component';
 import { ReikiComponent } from './ContentArea/Services/reiki/reiki.component';
 import { PilatesComponent } from './ContentArea/Services/pilates/pilates.component';
 import { NutritionComponent } from './ContentArea/Services/nutrition/nutrition.component';
+import { MassageComponent } from './ContentArea/Services/Massage/Massage.component';
 import { MeditationComponent } from './ContentArea/Services/meditation/meditation.component';
-import { DepressionComponent } from './ContentArea/Services/depression/depression.component';
+import { BodyworkComponent } from './ContentArea/Services/Bodywork/Bodywork.component';
 import { ChiropracticComponent } from './ContentArea/Services/chiropractic/chiropractic.component';
 import { AyurvedaComponent } from './ContentArea/Services/ayurveda/ayurveda.component';
 import { ArtTherapyComponent } from './ContentArea/Services/art-therapy/art-therapy.component';
@@ -44,12 +45,13 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
 const routes: Routes = [{ path: '', component: HomeComponent },
 
 { path: 'Services/Yoga', component: YogaComponent },
-{ path: 'ServicesTherapy', component: TherapyComponent },
+{ path: 'Services/Psychotherapy', component: PsychotherapyComponent },
 { path: 'Services/Reiki', component: ReikiComponent },
 { path: 'Services/Pilates', component: PilatesComponent },
 { path: 'Services/Nutrition', component: NutritionComponent },
+{ path: 'Services/Massage', component: MassageComponent },
 { path: 'Services/Meditation', component: MeditationComponent },
-{ path: 'Services/Depression', component: DepressionComponent },
+{ path: 'Services/Bodywork', component: BodyworkComponent },
 { path: 'Services/Chiropractic', component: ChiropracticComponent },
 { path: 'Services/Ayurveda', component: AyurvedaComponent },
 { path: 'Services/Art-Therapy', component: ArtTherapyComponent },
