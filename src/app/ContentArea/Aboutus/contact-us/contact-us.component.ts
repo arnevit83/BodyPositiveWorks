@@ -31,6 +31,21 @@ export class ContactUsComponent {
     //   this.meta.updateTag({ name: 'keywords', content: 'Freelance copywriter,Copywriter,Brand strategist,SEO copywriting,Brand strategies,Book Author,Author,Yoga books,Yoga memoir,Yoga School Dropout,Yoga shop' });
   }
   ngOnInit() {
+    $(function() {
+            $(".form-control").focus(function(){
+              $(this).parent().find('label').addClass("is-focused")
+            $(this).parent().addClass("is-focused")
+            }).blur(function(){
+              if($(this).val() != ''){
+                $(this).parent().find('label').removeClass("is-focused")
+                $(this).parent().removeClass("is-focused").addClass("is-filled");
+              }else{
+                $(this).parent().find('label').removeClass("is-focused")
+              }
+     });
+    });
+
+
     this.registerForm = this.formBuilder.group({
         firstName: ['', Validators.required],
         phone: ['', ],
@@ -50,6 +65,8 @@ export class ContactUsComponent {
         return;
     }
 
+
+    
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value))
 }
 
