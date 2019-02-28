@@ -13,7 +13,8 @@ import { NavComponent } from './Nav/app.Nav';
 import { PageNotFoundComponent } from './PageNotFound/app.PageNotFound';
 
 import { HomeComponent } from './ContentArea/app.Home';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 // import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -91,6 +92,8 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule ,
     FontAwesomeModule,
     // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
