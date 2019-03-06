@@ -10,8 +10,8 @@ import { Meta } from '@angular/platform-browser';
 })
 export class HomeComponent {
   public constructor(private titleService: Title, private meta: Meta) {
-    //   this.titleService.setTitle( "Lucy Edge - Copywriter, SEO Copywriting, Brand Strategist" );
-    //   this.meta.updateTag({ name: 'description', content: 'Need help defining your customer? Creating your brand purpose? Spreading your brand idea? ​I can help. I am a creative brand strategist, published book author and strategically focused freelance copywriter with SEO copywriting certification. I combine these skills to create brand strategies and stories that grow your business.' });
-    //   this.meta.updateTag({ name: 'keywords', content: 'Freelance copywriter,Copywriter,Brand strategist,SEO copywriting,Brand strategies,Book Author,Author,Yoga books,Yoga memoir,Yoga School Dropout,Yoga shop' });
+       this.titleService.setTitle( "Holistic Health & Wellness Center, NJ – Bergen County & Rockland" );
+       this.meta.updateTag({ name: 'description', content: 'Holistic one stop health & wellness center. Feel good inside & out with our integrated services, programs & classes. Our licensed therapists, the best in NJ, specialize in anxiety, depression, negative body image, eating disorders, & substance addiction. Nutritionists, Psychotherapists, Massage, Yoga, Pilates & more.' });
+       this.meta.updateTag({ name: 'keywords', content: 'Yoga NJ, Yoga Bergen County, Yoga Saddle River NJ, Chiropractor NJ, Chiropractor Bergen County, Nutritionist nj, Nutritionist bergen county nj, Psychotherapy NJ, Psychotherapy in Bergen County NJ, Massage places NJ, Massage Westfield NJ, Massage Fair Lawn NJ, Pilates NJ, Pilates classes Bergen County NJ' });
   }
 }

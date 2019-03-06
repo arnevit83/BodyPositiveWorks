@@ -31,9 +31,9 @@ export class ContactUsComponent {
   submitted = false;
 
   public constructor(private titleService: Title, private meta: Meta,private formBuilder: FormBuilder,private http: HttpClient) {
-    this.titleService.setTitle("Contact Us - Body positivity Works – Winner Bergen Magazine Readers’ Choice Awards");
-    this.meta.updateTag({ name: 'description', content: 'Voted one of the best yoga studios in NJ, we host a wide range of yoga classes and types of yoga - from Kundalini Yoga to Kids Yoga to Restorative Yoga. In our Bergen yoga studio there’s no “right” way to do a yoga pose, and no judgment. We are body positive warriors (we also love cake), empowering and celebrating you.' });
-    //   this.meta.updateTag({ name: 'keywords', content: 'Freelance copywriter,Copywriter,Brand strategist,SEO copywriting,Brand strategies,Book Author,Author,Yoga books,Yoga memoir,Yoga School Dropout,Yoga shop' });
+    this.titleService.setTitle("Contact Us - Body Positive Works, Saddle River, Bergen County");
+    this.meta.updateTag({ name: 'description', content: 'Our home is a fully renovated historic building in the center of Saddle River, Bergen County, New Jersey. Centrally located with convenient access to Rt. 17 and the Garden State Parkway, and on the border of Rockland County. Drop in, call us or send us a message. We’d love to hear from you.' });
+    this.meta.updateTag({ name: 'keywords', content: 'Saddle River, Bergen County, New Jersey, Rockland County' });
   }
   ngOnInit() {
     $(function() {
