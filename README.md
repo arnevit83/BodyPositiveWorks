@@ -25,9 +25,9 @@ websites@duncanpeach.com
 * [Menu](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/BoPoMenu.pdf)
 * [WorkFlow](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/BoPoWorkswebsite.pdf)
 
-## License
+## Copyright
 
-This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for details
+Copyright (c) 2018, 2019, Duncan Peach.
 
 ## Acknowledgments
 
