@@ -39,7 +39,7 @@ import { EatingDisordersComponent } from './ContentArea/Expertise/eating-disorde
 import { NegativeBodyImageComponent } from './ContentArea/Expertise/negative-body-image/negative-body-image.component';
 
 import { PricingAndBundlesComponent } from './ContentArea/Pricing/pricing-and-bundles/pricing-and-bundles.component';
-import { RentOurSpaceComponent } from './ContentArea/Pricing/rent-our-space/rent-our-space.component';
+import { UseOurSpaceComponent } from './ContentArea/Community/UseOurSpace/UseOurSpace.component';
 
 import { ContactUsComponent } from './ContentArea/Aboutus/contact-us/contact-us.component';
 import { FoundersBiosComponent } from './ContentArea/Aboutus/founders-bios/founders-bios.component';
@@ -77,7 +77,7 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
     EatingDisordersComponent,
     NegativeBodyImageComponent,
     PricingAndBundlesComponent,
-    RentOurSpaceComponent,
+    UseOurSpaceComponent,
     MassageComponent,
     ContactUsComponent,
     FoundersBiosComponent,

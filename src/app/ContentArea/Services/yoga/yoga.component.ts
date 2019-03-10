@@ -25,8 +25,8 @@ export class YogaComponent implements OnInit {
   faMapMarkerAlt = faMapMarkerAlt;
   public constructor(private titleService: Title, private meta: Meta) {
     this.titleService.setTitle("Yoga Bergen County NJ – Winner Bergen Magazine Readers’ Choice Awards");
-    this.meta.updateTag({ name: 'description', content: 'Voted one of the best yoga studios in NJ, we host a wide range of yoga classes and types of yoga - from Kundalini Yoga to Kids Yoga to Yin Yoga. In our Bergen yoga studio there’s no “right” way to do a yoga pose, and no judgment. We are body positive warriors (we also love cake), empowering and celebrating you.' });
-    //   this.meta.updateTag({ name: 'keywords', content: 'Freelance copywriter,Copywriter,Brand strategist,SEO copywriting,Brand strategies,Book Author,Author,Yoga books,Yoga memoir,Yoga School Dropout,Yoga shop' });
+    this.meta.updateTag({ name: 'description', content: 'Voted the best yoga in Bergen by readers of Bergen Magazine, we host a range of yoga classes & types of yoga - from Kundalini Yoga to Kids Yoga to Yin Yoga. In our yoga studio there’s no “right” way to do a yoga pose & no judgment. We are body positive warriors (we also love cake), empowering & celebrating you.' });
+    this.meta.updateTag({ name: 'keywords', content: 'Yoga, Yoga classes NJ, Yoga NJ, Best yoga studios in NJ, Yoga Bergen County, Yoga Bergen County NJ, Yoga Saddle River NJ, Yoga in Bergen County New Jersey, Yoga Allendale NJ, Yoga classes in Bergen County, Kundalini yoga, Curvy Yoga' });
   }
 
   ngOnInit() {

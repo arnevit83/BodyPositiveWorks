@@ -23,7 +23,7 @@ import { DepressionExpertiseComponent } from './ContentArea/Expertise/depression
 import { AnxietyComponent } from './ContentArea/Expertise/anxiety/anxiety.component';
 import { AddictionComponent } from './ContentArea/Expertise/addiction/addiction.component';
 
-import { RentOurSpaceComponent } from './ContentArea/Pricing/rent-our-space/rent-our-space.component';
+import { UseOurSpaceComponent } from './ContentArea/Community/UseOurSpace/UseOurSpace.component';
 import { PricingAndBundlesComponent } from './ContentArea/Pricing/pricing-and-bundles/pricing-and-bundles.component';
 
 import { CommunityComponent } from './ContentArea/Community/community.component';
@@ -63,7 +63,7 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'Expertise/Anxiety', component: AnxietyComponent },
 { path: 'Expertise/Addiction', component: AddictionComponent },
 
-{ path: 'Pricing/Rent-Our-Space', component: RentOurSpaceComponent },
+{ path: 'Community/Use-Our-Space', component: UseOurSpaceComponent },
 { path: 'Pricing/Pricing-And-Bundles', component: PricingAndBundlesComponent },
 
 { path: 'Community', component: CommunityComponent },
