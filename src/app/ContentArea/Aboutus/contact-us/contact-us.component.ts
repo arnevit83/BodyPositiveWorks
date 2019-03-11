@@ -31,7 +31,7 @@ export class ContactUsComponent {
   submitted = false;
 
   public constructor(private titleService: Title, private meta: Meta,private formBuilder: FormBuilder,private http: HttpClient) {
-    this.titleService.setTitle("Contact Us - Body Positive Works, Saddle River, Bergen County");
+    this.titleService.setTitle("Contact Us – Body Positive Works, Saddle River, Bergen County ");
     this.meta.updateTag({ name: 'description', content: 'Our home is a fully renovated historic building in the center of Saddle River, Bergen County, New Jersey. Centrally located with convenient access to Rt. 17 and the Garden State Parkway, and on the border of Rockland County. Drop in, call us or send us a message. We’d love to hear from you.' });
     this.meta.updateTag({ name: 'keywords', content: 'Saddle River, Bergen County, New Jersey, Rockland County' });
   }

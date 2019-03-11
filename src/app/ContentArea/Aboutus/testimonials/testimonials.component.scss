@@ -1,6 +1,7 @@
 .carousel .carousel-inner .carousel-item .card {
   max-width: 650px;
   margin   : 60px auto;
+  min-height: 545px;
 }
 
 .carousel-control-prev-icon {
@@ -17,7 +18,7 @@
 }
 
 .textmonial {
-  width  : 500px;
+  width  : 650px;
   margin : 0 auto !important;
   display: block;
 }
