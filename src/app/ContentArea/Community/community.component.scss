@@ -12,3 +12,8 @@
   }
   
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)  { .carousel .carousel-inner .carousel-item .card{
+
+    display: block!important;
+    
+    } }

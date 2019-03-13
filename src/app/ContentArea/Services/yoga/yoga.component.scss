@@ -1,5 +1,5 @@
 .carousel .carousel-inner .carousel-item .card {
-  max-width: 625px;
+  max-width: 387px;
   margin   : 60px auto;
 }
 
@@ -18,7 +18,19 @@
 
 
 }
-.card-profile{
-min-height: 625px;
 
+.card-body b{
+  position: absolute;
+  bottom: 0px;
+  background: white;
+  width: 80%;
+  display: inline-flex;
+  padding-bottom: 15px;
+  padding-top: 6px;
+}
+#carouselteacher .card-body{
+  overflow: hidden;height: 425px;
+}
+.card .card-header.card-header-image .card-title{
+  text-shadow:none!important;
 }
