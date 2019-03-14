@@ -630,9 +630,11 @@ footer ul {
 }
 
 .card-title {
+  bottom: -24px!important;
+}
+.Yoga .card-title {
   bottom: -2px!important;
 }
-
 .h2fix {
   font-size    : 2rem;
   line-height  : 1.5em;
