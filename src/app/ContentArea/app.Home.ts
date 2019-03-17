@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
 
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'Home',
@@ -9,6 +11,10 @@ import { Meta } from '@angular/platform-browser';
   styleUrls: ['./Home.scss']
 })
 export class HomeComponent {
+
+  faPhone = faPhone;
+  faEnvelope= faEnvelope;
+
   public constructor(private titleService: Title, private meta: Meta) {
        this.titleService.setTitle( "Holistic Health & Wellness Center – Bergen County NJ" );
        this.meta.updateTag({ name: 'description', content: 'Holistic one stop health & wellness center. Feel good inside & out with our integrated services, programs & classes. Our licensed therapists specialize in anxiety, depression, negative body image, eating disorders, & substance addiction. Nutritionists, psychotherapists, massage, yoga, Pilates & more.' });
