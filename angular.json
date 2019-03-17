@@ -17,8 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/",
-            "index": "src/index-min.html",
+            "outputPath": "dist/browser",
+            "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
@@ -43,7 +43,7 @@
               "node_modules/material-kit/assets/js/core/bootstrap-material-design.min.js",
               "node_modules/material-kit/assets/js/material-kit.js",
               "src/assets/js/main.js",
-              "src/assets/js/onload.js",
+              "src/assets/js/onload.js"
             ]
           },
           "configurations": {
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "LucyEdgeApp:build"
+            "browserTarget": "BoPoWorksApp:build"
           }
         },
         "test": {
@@ -99,7 +99,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/assets/css/styles.scss",
+              "src/assets/css/styles.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -109,7 +109,7 @@
               "node_modules/material-kit/assets/js/core/bootstrap-material-design.min.js",
               "node_modules/material-kit/assets/js/material-kit.js",
               "src/assets/js/main.js",
-              "src/assets/js/onload.js",
+              "src/assets/js/onload.js"
             ],
             "assets": [
               "src/favicon.ico",
@@ -132,6 +132,24 @@
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "src/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            }
           }
         }
       }

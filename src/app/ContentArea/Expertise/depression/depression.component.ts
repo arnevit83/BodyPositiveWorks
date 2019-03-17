@@ -6,11 +6,11 @@ import { Meta } from '@angular/platform-browser';
 
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 @Component({
-  selector: 'app-depressionexpertise',
+  selector: 'app-depression',
   templateUrl: './depression.component.html',
   styleUrls: ['./depression.component.scss']
 })
-export class DepressionExpertiseComponent implements OnInit {
+export class DepressionComponent implements OnInit {
 
   faMapMarkerAlt = faMapMarkerAlt;
   public constructor(private titleService: Title, private meta: Meta) {

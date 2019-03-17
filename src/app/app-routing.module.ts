@@ -19,7 +19,7 @@ import { ArtTherapyComponent } from './ContentArea/Services/art-therapy/art-ther
 
 import { NegativeBodyImageComponent } from './ContentArea/Expertise/negative-body-image/negative-body-image.component';
 import { EatingDisordersComponent } from './ContentArea/Expertise/eating-disorders/eating-disorders.component';
-import { DepressionExpertiseComponent } from './ContentArea/Expertise/depression/depression.component';
+import { DepressionComponent } from './ContentArea/Expertise/depression/depression.component';
 import { AnxietyComponent } from './ContentArea/Expertise/anxiety/anxiety.component';
 import { AddictionComponent } from './ContentArea/Expertise/addiction/addiction.component';
 
@@ -59,7 +59,7 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 
 { path: 'Expertise/Negative-Body-Image', component: NegativeBodyImageComponent },
 { path: 'Expertise/Eating-Disorders', component: EatingDisordersComponent },
-{ path: 'Expertise/Depression', component: DepressionExpertiseComponent },
+{ path: 'Expertise/Depression', component: DepressionComponent },
 { path: 'Expertise/Anxiety', component: AnxietyComponent },
 { path: 'Expertise/Addiction', component: AddictionComponent },
 

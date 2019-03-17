@@ -33,7 +33,7 @@ import { PsychotherapyComponent } from './ContentArea/Services/Psychotherapy/Psy
 import { ReikiComponent } from './ContentArea/Services/reiki/reiki.component';
 
 import { AddictionComponent } from './ContentArea/Expertise/addiction/addiction.component';
-import { DepressionExpertiseComponent } from './ContentArea/Expertise/depression/depression.component';
+import { DepressionComponent } from './ContentArea/Expertise/depression/depression.component';
 import { AnxietyComponent } from './ContentArea/Expertise/anxiety/anxiety.component';
 import { EatingDisordersComponent } from './ContentArea/Expertise/eating-disorders/eating-disorders.component';
 import { NegativeBodyImageComponent } from './ContentArea/Expertise/negative-body-image/negative-body-image.component';
@@ -85,12 +85,12 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
     TestimonialsComponent,
     OutreachComponent,
     CommunityComponent,
-    DepressionExpertiseComponent,
+    DepressionComponent,
     ScheduleComponent,
     EventsComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule ,
