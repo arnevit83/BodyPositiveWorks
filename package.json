@@ -13,6 +13,9 @@
     "build:ssr": "node compress-images.js && npm run build:client-and-server-bundles && npm run compile:server",
     "build:client-and-server-bundles": "ng build --prod --aot && ng run BoPoWorksApp:server:production"
   },
+  "engines": {
+    "node": "10.15.3"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^7.2.4",
