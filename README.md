@@ -14,7 +14,7 @@ Run `npm run build:ssr && npm run serve:ssr` to build the project.
 #GitHub
 
 Setup for continues deployment to. (For Developent)
-https://justpeachysolutions.co.uk/#/
+https://justpeachysolutions.co.uk/
 
 ## Further help
 

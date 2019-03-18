@@ -101,6 +101,14 @@ a:hover {
 //Calculator for CSS only Banner timings
 //https://docs.google.com/spreadsheets/d/1F4odaBXJpM4OZTCBEod4QiS2xI_9wg_EqAUwI7A6JGQ/edit#gid=587373791
 //
+.Homebutton a{
+  padding: 4px 0px;
+  display: block;
+  color: white;
+}
+.Homebutton fa-icon{
+  font-size: 20px;
+}
 
 .form-control {
   box-shadow: none!important;
@@ -230,7 +238,7 @@ top:0;
   height: 100%!important;
 }
 
-.Home #SliderBanner picture:nth-of-type(5) img {}
+// .Home #SliderBanner picture:nth-of-type(5) img {}
 
 .Home .header-filter::before {
   background: rgba(0, 0, 0, 0.15) !important;
@@ -730,3 +738,9 @@ footer ul {
 //   background-position: center center; 
 // }
 
+.dropdown-item.active, .dropdown-item:active{
+  background-color:white;
+}
+.dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover, .dropdown-menu a:active, .dropdown-menu a:focus, .dropdown-menu a:hover {
+ color:white;
+}
