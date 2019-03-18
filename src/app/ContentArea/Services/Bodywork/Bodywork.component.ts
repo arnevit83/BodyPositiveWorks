@@ -10,8 +10,8 @@ import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-bodywork',
-  templateUrl: './bodywork.component.html',
-  styleUrls: ['./bodywork.component.scss']
+  templateUrl: './Bodywork.component.html',
+  styleUrls: ['./Bodywork.component.scss']
 })
 export class BodyworkComponent implements OnInit {
 
