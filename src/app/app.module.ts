@@ -16,7 +16,7 @@ import { HomeComponent } from './ContentArea/app.Home';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
-// import { ServiceWorkerModule } from '@angular/service-worker';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -96,7 +96,7 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
     FormsModule ,
     FontAwesomeModule,
     HttpClientModule ,
-    // ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [Title],
   bootstrap: [AppComponent]
