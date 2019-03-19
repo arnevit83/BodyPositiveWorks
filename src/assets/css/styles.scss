@@ -445,11 +445,7 @@ h4.description {
   /* for old Konqueror browsers */
   z-index              : 3;
 }
-@media (max-width: 830px) {
-  .ScrollUp {
-    right: 20px;
-  }
-}
+
 
 .modal-body {
   color      : #999;
@@ -479,7 +475,7 @@ h4.description {
 
 .footer-black a {
   color  : #3C4858;
-  opacity: 0.80;
+
 }
 
 .footer-black a:hover,
@@ -743,4 +739,27 @@ footer ul {
 }
 .dropdown-menu .dropdown-item:focus, .dropdown-menu .dropdown-item:hover, .dropdown-menu a:active, .dropdown-menu a:focus, .dropdown-menu a:hover {
  color:white;
+}
+.carousel-control-next:hover{
+cursor: pointer;
+}
+.carousel-control-prev:hover{
+  cursor: pointer;
+}
+@media (max-width: 830px) {
+  .ScrollUp {
+    right: 20px;
+  }
+   .h2fix{
+    font-size: 1.5rem!important;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+  .card-title {
+    bottom: 0px !important;
+}
+.colored-shadow{
+  top: 13px!important;
+}
 }
