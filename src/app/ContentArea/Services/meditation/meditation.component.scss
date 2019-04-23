@@ -35,4 +35,7 @@
   }
   .card .card-header.card-header-image .card-title{
     text-shadow:none!important;    font-size: 0.8rem;
-  }
+  }  @media screen and (min-width: 767px){
+    .card-profile .card-header-image {
+        max-height: 505px !important;
+    }}

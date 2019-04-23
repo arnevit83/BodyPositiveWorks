@@ -766,3 +766,8 @@ cursor: pointer;
 #vertical-nav a:hover{
 cursor: pointer;
 }
+
+@media screen and (min-width: 767px){
+.card-profile .card-header-image {
+    max-height: 460px!important;
+}}
