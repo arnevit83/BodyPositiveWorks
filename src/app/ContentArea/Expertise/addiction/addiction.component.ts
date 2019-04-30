@@ -18,7 +18,7 @@ export class AddictionComponent implements OnInit {
   public constructor(private titleService: Title, private meta: Meta) {
     this.titleService.setTitle("Licensed Holistic Addiction Specialists NJ – Integrated Treatments");
     this.meta.updateTag({ name: 'description', content: 'Looking for addiction treatment? Our highly qualified therapists are addiction specialists, serving NJ, Bergen County and Rockland County. Body Positive Works offers integrated addiction help in the form of services, programs and classes to support individuals on their journey to recovery.' });
-    this.meta.updateTag({ name: 'keywords', content: 'Alcohol addiction treatment, Alcohol addiction help, Drug addiction treatment, Alcohol addiction help, Addiction therapist near you, Addiction specialist NJ, Addiction therapist NJ, NJ drug addiction help, Bergen County addiction recovery program, Drug and alcohol Counselor, Certified drug and alcohol Counselor, Certified drug and alcohol Counselor nj, Licensed drug and alcohol Counselor nj' });
+    this.meta.updateTag({ name: 'keywords', content: 'Alcohol addiction treatment, Alcohol addiction help, Drug addiction treatment, Alcohol addiction help, Addiction therapist near you, Addiction specialist NJ, Addiction therapist NJ, NJ drug addiction help, Bergen County addiction recovery program, alcohol and drug Counselor, Certified alcohol and drug Counselor, Certified alcohol and drug Counselor nj, Licensed alcohol and drug Counselor nj' });
   }
 
   ngOnInit() {
