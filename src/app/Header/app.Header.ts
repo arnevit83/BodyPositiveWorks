@@ -5,8 +5,8 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './header.html',
 })
 export class HeaderComponent {
-  TitleText = 'THE FEEL GOOD PLACE';
-
+  TitleText = '';
+  TitleSubText = '';
   constructor(
     private router: Router,
   ) {
@@ -15,11 +15,22 @@ export class HeaderComponent {
       if (event instanceof NavigationEnd) {
         const eventUrl = event.urlAfterRedirects.split(/[\s,]+/);
         var currentRoute = (eventUrl || ['THE FEEL GOOD PLACE']).join().replace('-', ' ').replace('-', ' ')
+        if (currentRoute === "/"){
+          this.TitleSubText = "The Feel Good Place";
+        }else{
+          this.TitleSubText = 'Body Positive Works'
+        }
         if (currentRoute.split("/").slice(-1).toString() == ""){
-        currentRoute="THE FEEL GOOD PLACE";
+        currentRoute="Body Positive Works";
+      
         }
         this.TitleText =currentRoute.split("/").slice(-1).toString() ;
+  
       }
+
+
+
+
     });
   }
 }
