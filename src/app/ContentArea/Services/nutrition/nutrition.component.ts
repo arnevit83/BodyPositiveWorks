@@ -23,9 +23,9 @@ export class NutritionComponent implements OnInit {
   faCalendarAlt = faCalendarAlt;
   faMapMarkerAlt = faMapMarkerAlt;
   public constructor(private titleService: Title, private meta: Meta) {
-    this.titleService.setTitle("Registered Dietician Bergen County NJ – One of the Best Dieticians in NJ");
-    this.meta.updateTag({ name: 'description', content: 'Body Positive Works has one of the best dieticians in Bergen County NJ. Specializing in emotional eating, overeating, binging, & food restricting. Individualized nutrition counseling. Addressing the mind & heart issues behind our relationship with food.' });
-    this.meta.updateTag({ name: 'keywords', content: 'Registered Dietician, Dietician, Nutritionist, Nutritionist near you, Nutritionist nj, Nutritionist bergen county nj, Best nutritionist in nj, Top nutritionists in nj, Best nutritionist in bergen county, Nutrition services, Emotional eating, Overeating, Binge eating disorders' });
+    this.titleService.setTitle("Registered Dietitian Bergen County NJ – One of the Best Dietitians in NJ");
+    this.meta.updateTag({ name: 'description', content: 'Body Positive Works has one of the best dietitians in Bergen County NJ. Specializing in emotional eating, overeating, binging, & food restricting. Individualized nutrition counseling. Addressing the mind & heart issues behind our relationship with food.' });
+    this.meta.updateTag({ name: 'keywords', content: 'Registered Dietitian, Dietitian, Nutritionist, Nutritionist near you, Nutritionist nj, Nutritionist bergen county nj, Best nutritionist in nj, Top nutritionists in nj, Best nutritionist in bergen county, Nutrition services, Emotional eating, Overeating, Binge eating disorders' });
   }
 
   ngOnInit() {
