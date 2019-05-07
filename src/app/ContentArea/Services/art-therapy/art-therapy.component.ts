@@ -24,8 +24,8 @@ export class ArtTherapyComponent implements OnInit {
   faCalendarAlt = faCalendarAlt;
   faMapMarkerAlt = faMapMarkerAlt;
   public constructor(private titleService: Title, private meta: Meta) {
-    this.titleService.setTitle("Yoga Bergen County NJ – Winner Bergen Magazine Readers’ Choice Awards");
-    this.meta.updateTag({ name: 'description', content: 'Body Positive Works is proud to host one of the top nutritionists in Bergen County NJ. Specializing in emotional eating, overeating, binging, & food restricting. Individualized nutrition counseling. Addressing the mind & heart issues behind our relationship with food.  Safe & joyful community.' });
+    this.titleService.setTitle("Licensed Art Therapy Serving Bergen County & Rockland County");
+    this.meta.updateTag({ name: 'description', content: 'Individualized Art Therapy sessions with our licensed Art Therapist. Helping children, teens, and adults relieve stress, anxiety and depression, unlock deeply held emotions, address trauma and PTSD, improve self-esteem, manage addictions, and cope with a variety of conditions from autism to mental illness.' });
     this.meta.updateTag({ name: 'keywords', content: 'Nutritionist, Nutritionist near you, Nutritionist nj, Nutritionist bergen county nj, Best nutritionist in nj, Top nutritionists in nj, Best nutritionist in bergen county, Nutrition services, Emotional eating, Overeating, Binge eating disorders' });
   }
 
