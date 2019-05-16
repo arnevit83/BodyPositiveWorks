@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "BoPo-Frontend",
+      "script": "./dist/server.js"
+    },
+    {
+      "name": "BoPo-CMS",
+      "script": "./BoPoWorksCMS/server.js"
+    }
+  ]
+}
