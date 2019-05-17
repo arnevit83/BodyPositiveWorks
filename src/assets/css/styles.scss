@@ -771,3 +771,10 @@ cursor: pointer;
 .card-profile .card-header-image {
     max-height: 460px!important;
 }}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .card{
+      display: block!important;
+
+  }
+}

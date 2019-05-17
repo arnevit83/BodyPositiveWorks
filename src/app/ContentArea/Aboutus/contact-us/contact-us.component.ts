@@ -74,7 +74,7 @@ export class ContactUsComponent {
      
         $(function(){
           $("#contactusbutton").attr("disabled", "disabled");
-          $("#contactusbutton").val("We will be intouch shortly");
+          $("#contactusbutton").val("We will be in touch shortly");
          });
           
       },
