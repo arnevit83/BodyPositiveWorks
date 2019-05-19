@@ -27,21 +27,26 @@ export class EventsComponent {
 
     const moment = require('moment');     
     this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&_sort=StartDateTime:ASC")
-    .subscribe((events) => this.events = events);
+    .subscribe((events) => this.Converter(events));
+    }
 
+  Converter(data: any){
+      var showdown  = require('showdown');
+      let converter = new showdown.Converter();
+      for(let i = 0; i < data.length; i++){
+       data[i].Description = converter.makeHtml(data[i].Description);
+      }
+    this.events = data
   }
-  
  filterForeCasts(filterVal: any) {
       if (filterVal == "all"){
         const moment = require('moment');     
           this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&_sort=StartDateTime:ASC")
-          .subscribe((events) => this.events = events);
-          console.warn(filterVal);
+          .subscribe((events) => this.Converter(events));
       }else{
         const moment = require('moment');     
         this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&categories.CategoryTitle=" + filterVal +  "&_sort=StartDateTime:ASC")
-        .subscribe((events) => this.events = events);
-        console.warn(filterVal);
+        .subscribe((events) => this.Converter(events));
       }
   }
 
