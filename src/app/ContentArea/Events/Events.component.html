@@ -49,14 +49,12 @@
                     <div class="col align-self-end">
                         <div *ngIf="services?.length > 0">
                         <div id="FilterMenu" class="dropdown float-right dropleft">
-                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Services
+                            <button class="btn btn-default " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Filter&nbsp;&nbsp;<fa-icon [icon]="faFilter"></fa-icon>
                             </button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" style="display: block;text-align: center;" href="#">All</a>
-                                <span *ngFor="let service of services;let i = index">
-                                    <a class="dropdown-item" style="display: block;text-align: center;" href="#">{{service.CategoryTitle}}</a>
-                                </span>
+                            <div id="FilterMenuLink" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a (click)="filterForeCasts('all')" class="dropdown-item" style="display: block;text-align: center;">All</a>
+                                    <a  *ngFor="let service of services;let i = index" class="dropdown-item" style="display: block;text-align: center;" (click)="filterForeCasts($event.target.text)">{{service.CategoryTitle}}</a>
                                 </div>
                             </div>
                           </div>
@@ -66,7 +64,7 @@
                
                 <div *ngIf="events?.length > 0">
              
-                  <div class="row" *ngFor="let event of events;let i = index">
+                  <div class="row" *ngFor="let event of events| paginate: { itemsPerPage: 2, currentPage: p }">
                       <div class="col-lg-12">
                           <div class="media-body">
                               <h4 class="media-heading text-rose ">{{event.Title}}  <small class="float-right" style="text-align: right">{{event.StartDateTime  | date : "fullDate" }}<br />{{event.StartDateTime  | date : "shortTime" }} to {{event.EndDateTime  | date : "shortTime" }}</small></h4>
@@ -82,7 +80,7 @@
                           <hr><br />
                       </div>
                   </div>
-
+                  <pagination-controls (pageChange)="p = $event"></pagination-controls>
             
        
               </div>

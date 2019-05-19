@@ -45,9 +45,10 @@
     "imagemin-pngquant": "^7.0.0",
     "imagemin-svgo": "^7.0.0",
     "imagemin-webp": "^5.0.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "material-kit": "^2.0.4",
     "moment": "^2.24.0",
+    "ngx-pagination": "^3.2.1",
     "popper.js": "^1.14.7",
     "rxjs": "^6.4.0",
     "terser": "3.14.1",
@@ -55,7 +56,7 @@
     "zone.js": "^0.8.29"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.12.4",
+    "@angular-devkit/build-angular": "^0.13.9",
     "@angular/cli": "^7.3.0",
     "@angular/compiler-cli": "^7.2.9",
     "@angular/language-service": "^7.2.4",

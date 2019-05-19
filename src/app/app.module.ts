@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/app.Header';
 
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { SignupComponent } from './Footer/app.Signup';
 import { FooterComponent } from './Footer/app.Footer';
@@ -91,6 +92,7 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    NgxPaginationModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule ,

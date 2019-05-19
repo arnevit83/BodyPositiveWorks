@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
 declare var require: any
 
 
@@ -11,7 +12,8 @@ declare var require: any
   styleUrls: ['./Events.component.scss']
 })
 export class EventsComponent {
-  events: any;
+  faFilter = faFilter;
+  public events: any;
   services: any;
   
   public constructor(private titleService: Title, private meta: Meta, private http: HttpClient ) {
@@ -27,6 +29,20 @@ export class EventsComponent {
     this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&_sort=StartDateTime:ASC")
     .subscribe((events) => this.events = events);
 
+  }
+  
+ filterForeCasts(filterVal: any) {
+      if (filterVal == "all"){
+        const moment = require('moment');     
+          this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&_sort=StartDateTime:ASC")
+          .subscribe((events) => this.events = events);
+          console.warn(filterVal);
+      }else{
+        const moment = require('moment');     
+        this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&categories.CategoryTitle=" + filterVal +  "&_sort=StartDateTime:ASC")
+        .subscribe((events) => this.events = events);
+        console.warn(filterVal);
+      }
   }
 
 }
