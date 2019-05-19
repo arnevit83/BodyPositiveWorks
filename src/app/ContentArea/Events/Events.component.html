@@ -42,7 +42,52 @@
                 <div style="overflow: auto; -webkit-overflow-scrolling: touch;"><IFRAME style="font-family: 'Open Sans', sans-serif;"  SRC="https://manager.healcode.com/iframe/schedule/94621" WIDTH="100%" HEIGHT="1000px" frameborder="0" scrolling="yes">Loading...</IFRAME></div>
             </div>
             <div class="tab-pane active show" id="Events">
-                <div style="overflow: auto; -webkit-overflow-scrolling: touch;"><IFRAME style="font-family: 'Open Sans', sans-serif;"  SRC="https://manager.healcode.com/iframe/schedule/95063" WIDTH="100%" HEIGHT="1000px" frameborder="0" scrolling="yes">Loading...</IFRAME></div>
+                <div class="row">
+                    <div class="col">
+                      &nbsp;
+                    </div>
+                    <div class="col align-self-end">
+                        <div *ngIf="services?.length > 0">
+                        <div id="FilterMenu" class="dropdown float-right dropleft">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Services
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" style="display: block;text-align: center;" href="#">All</a>
+                                <span *ngFor="let service of services;let i = index">
+                                    <a class="dropdown-item" style="display: block;text-align: center;" href="#">{{service.CategoryTitle}}</a>
+                                </span>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <br /><br />
+               
+                <div *ngIf="events?.length > 0">
+             
+                  <div class="row" *ngFor="let event of events;let i = index">
+                      <div class="col-lg-12">
+                          <div class="media-body">
+                              <h4 class="media-heading text-rose ">{{event.Title}}  <small class="float-right" style="text-align: right">{{event.StartDateTime  | date : "fullDate" }}<br />{{event.StartDateTime  | date : "shortTime" }} to {{event.EndDateTime  | date : "shortTime" }}</small></h4>
+                              <div *ngFor="let cat of event.categories;let i = index">
+                              <span class="badge badge-pill badge-rose float-left mr-1">{{cat.CategoryTitle}}</span>
+                              </div>
+                              <br /><br />
+
+                              <p>{{event.Description}}</p>
+                            </div>
+                            <a target="_blank" href="{{event.URL}}" class="btn btn-default btn-sm float-right">Book Now</a>
+                          <br /><br />
+                          <hr><br />
+                      </div>
+                  </div>
+
+            
+       
+              </div>
+
+
             </div>
           </div>
 
