@@ -22,10 +22,11 @@ export class EventsComponent {
     this.meta.updateTag({ name: 'keywords', content: 'Yoga NJ, Yoga Bergen County, Yoga Saddle River NJ, Chiropractor NJ, Chiropractor Bergen County, Nutritionist nj, Nutritionist bergen county nj, Psychotherapy NJ, Psychotherapy in Bergen County NJ, Massage places NJ, Massage Westfield NJ, Massage Fair Lawn NJ, Pilates NJ, Pilates classes Bergen County NJ' });
   }
   ngOnInit() {
-    this.http.get("https://cms.justpeachysolutions.co.uk/categories?events.id_gte=1&_sort=CategoryTitle:ASC")
+    const moment = require('moment');   
+
+    this.http.get("https://cms.justpeachysolutions.co.uk/categories?events.id_gte=1&_sort=CategoryTitle:ASC&events.StartDateTime_gte=" + moment().format('YYYY-MM-DD'))
     .subscribe((services) => this.services = services );
 
-    const moment = require('moment');     
     this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&_sort=StartDateTime:ASC")
     .subscribe((events) => this.Converter(events));
     }

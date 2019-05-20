@@ -1,10 +1,11 @@
 
-
+<div class="container">
 
 <div class="section section-white" id="">
+
   <div class="row text-center">
 
-    <div class="col-sm-10 col-md-8 ml-auto mr-auto">
+    <div class="col-sm-12 col-md-12 ml-auto mr-auto">
   
       <div class="card card-nav-tabs" id="myTab">
         <div class="card-header card-header-rose">
@@ -42,6 +43,7 @@
                 <div style="overflow: auto; -webkit-overflow-scrolling: touch;"><IFRAME style="font-family: 'Open Sans', sans-serif;"  SRC="https://manager.healcode.com/iframe/schedule/94621" WIDTH="100%" HEIGHT="1000px" frameborder="0" scrolling="yes">Loading...</IFRAME></div>
             </div>
             <div class="tab-pane active show" id="Events">
+              
                 <div class="row">
                     <div class="col">
                       &nbsp;
@@ -54,6 +56,7 @@
                             </button>
                             <div id="FilterMenuLink" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                     <a (click)="filterForeCasts('all')" class="dropdown-item" style="display: block;text-align: center;">All</a>
+                                    <div class="dropdown-divider"></div>
                                     <a  *ngFor="let service of services;let i = index" class="dropdown-item" style="display: block;text-align: center;" (click)="filterForeCasts($event.target.text)">{{service.CategoryTitle}}</a>
                                 </div>
                             </div>
@@ -62,10 +65,10 @@
                 </div>
                 <br /><br />
                
-                <div *ngIf="events?.length > 0">
+                <div  class="row"  *ngIf="events?.length > 0">
              
-                  <div class="row" *ngFor="let event of events| paginate: { itemsPerPage: 10, currentPage: p }">
-                      <div class="col-lg-12">
+               
+                      <div class="col-lg-12" *ngFor="let event of events| paginate: { itemsPerPage: 10, currentPage: p }">
                           <div class="media-body">
                               <h4 class="media-heading text-rose ">{{event.Title}}  <small class="float-right" style="text-align: right">{{event.StartDateTime  | date : "fullDate" }}<br />{{event.StartDateTime  | date : "shortTime" }} to {{event.EndDateTime  | date : "shortTime" }}</small></h4>
                               <div *ngFor="let cat of event.categories;let i = index">
@@ -77,11 +80,14 @@
                             <a target="_blank" href="{{event.URL}}" class="btn btn-default btn-sm float-right">Book Now</a>
                           <br /><br />
                           <hr><br />
-                      </div>
+                   
                   </div>
-                  <pagination-controls (pageChange)="p = $event"></pagination-controls>
-            
-       
+
+                  <div class="col-lg-12"><br /><br />
+                      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                  
+           
+             
               </div>
 
 
@@ -95,3 +101,4 @@
   </div>
 </div>
 
+</div>
