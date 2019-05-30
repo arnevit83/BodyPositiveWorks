@@ -4,7 +4,7 @@ import { Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
 declare var require: any
-
+declare var $: any;
 
 @Component({
   selector: 'app-Events',
@@ -29,6 +29,12 @@ export class EventsComponent {
 
     this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&_sort=StartDateTime:ASC")
     .subscribe((events) => this.Converter(events));
+
+    require('readmore-js');
+    $(function() {
+      $('#EventDescription p').readmore({ speed: 75, lessLink: '<a href="#">Read less</a>' });
+    });
+
     }
 
   Converter(data: any){
@@ -38,6 +44,10 @@ export class EventsComponent {
        data[i].Description = converter.makeHtml(data[i].Description);
       }
     this.events = data
+    require('readmore-js');
+    $(function() {
+      $('#EventDescription').readmore({ speed: 200, lessLink: '<a href="#">Read less</a>',collapsedHeight: 28 });
+    });
   }
  filterForeCasts(filterVal: any) {
       if (filterVal == "all"){
@@ -49,6 +59,10 @@ export class EventsComponent {
         this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&categories.CategoryTitle=" + filterVal +  "&_sort=StartDateTime:ASC")
         .subscribe((events) => this.Converter(events));
       }
+         require('readmore-js');
+    $(function() {
+      $('#EventDescription p').readmore({ speed: 75, lessLink: '<a href="#">Read less</a>' });
+    });
   }
 
 }

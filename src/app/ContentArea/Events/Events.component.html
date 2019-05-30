@@ -13,21 +13,10 @@
           <div class="nav-tabs-navigation">
             <div class="nav-tabs-wrapper">
               <ul class="nav nav-tabs" data-tabs="tabs">
-                  <li class="nav-item">
-                      <a class="nav-link " href="#All" data-toggle="tab">
-                      ALL
-    
-                       </a>
-                    </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#Classes" data-toggle="tab">
-                  Classes
-
-                   </a>
-                </li>
+             
                 <li class="nav-item">
                   <a class="nav-link active show" href="#Events" data-toggle="tab">
-                  Events
+                     Events
                   </a>
                 </li>
               </ul>
@@ -36,12 +25,7 @@
         </div>
         <div class="card-body ">
           <div class="tab-content text-center">
-            <div class="tab-pane" id="All"> 
-                <div style="overflow: auto; -webkit-overflow-scrolling: touch;"><IFRAME style="font-family: 'Open Sans', sans-serif;"  SRC="https://manager.healcode.com/iframe/schedule/95507" WIDTH="100%" HEIGHT="1000px" frameborder="0" scrolling="yes">Loading...</IFRAME></div>
-            </div>
-            <div class="tab-pane" id="Classes">
-                <div style="overflow: auto; -webkit-overflow-scrolling: touch;"><IFRAME style="font-family: 'Open Sans', sans-serif;"  SRC="https://manager.healcode.com/iframe/schedule/94621" WIDTH="100%" HEIGHT="1000px" frameborder="0" scrolling="yes">Loading...</IFRAME></div>
-            </div>
+
             <div class="tab-pane active show" id="Events">
               
                 <div class="row">
@@ -75,7 +59,7 @@
                               <span class="badge badge-pill badge-rose float-left mr-1">{{cat.CategoryTitle}}</span>
                               </div>
                               <br /><br />
-                              <div innerHTML="{{event.Description}}"> </div>
+                              <div id="EventDescription" innerHTML="{{event.Description}}"> </div>
                             </div>
                             <a target="_blank" href="{{event.URL}}" class="btn btn-default btn-sm float-right">Book Now</a>
                           <br /><br />

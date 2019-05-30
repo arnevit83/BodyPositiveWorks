@@ -50,6 +50,7 @@
     "moment": "^2.24.0",
     "ngx-pagination": "^3.2.1",
     "popper.js": "^1.14.7",
+    "readmore-js": "^2.2.1",
     "rxjs": "^6.4.0",
     "showdown": "^1.9.0",
     "terser": "3.14.1",

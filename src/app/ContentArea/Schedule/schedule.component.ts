@@ -4,7 +4,7 @@ import { Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
 declare var require: any
-
+declare var $: any;
 
 @Component({
   selector: 'app-schedule',
@@ -40,6 +40,10 @@ export class ScheduleComponent  {
        data[i].Description = converter.makeHtml(data[i].Description);
       }
     this.events = data
+    require('readmore-js');
+    $(function() {
+      $('#EventDescription').readmore({ speed: 200, lessLink: '<a href="#">Read less</a>',collapsedHeight: 28 });
+    });
   }
  filterForeCasts(filterVal: any) {
       if (filterVal == "all"){

@@ -26,7 +26,14 @@
                    </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#Events" data-toggle="tab">
+                  <a onclick="
+                  
+                  
+                  setTimeout(
+                    function() 
+                    {
+                      $('#EventDescription').readmore({ speed: 200, lessLink: '<a  >Read less</a>',collapsedHeight: 28 });
+                    }, 300);" class="nav-link" href="#Events" data-toggle="tab">
                   Events
                   </a>
                 </li>
@@ -45,54 +52,54 @@
             <div class="tab-pane" id="Events">
                 <div class="tab-pane active show" id="Events">
               
-                    <div class="row">
-                        <div class="col">
-                          &nbsp;
-                        </div>
-                        <div class="col align-self-end">
-                            <div *ngIf="services?.length > 0">
-                            <div id="FilterMenu" class="dropdown float-right dropleft">
-                                <button class="btn btn-default " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Filter&nbsp;&nbsp;<fa-icon [icon]="faFilter"></fa-icon>
-                                </button>
-                                <div id="FilterMenuLink" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                        <a (click)="filterForeCasts('all')" class="dropdown-item" style="display: block;text-align: center;">All</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a  *ngFor="let service of services;let i = index" class="dropdown-item" style="display: block;text-align: center;" (click)="filterForeCasts($event.target.text)">{{service.CategoryTitle}}</a>
-                                    </div>
-                                </div>
-                              </div>
-                        </div>
+                  <div class="row">
+                    <div class="col">
+                      &nbsp;
                     </div>
-                    <br /><br />
-                   
-                    <div  class="row"  *ngIf="events?.length > 0">
-                 
-                   
-                          <div class="col-lg-12" *ngFor="let event of events| paginate: { itemsPerPage: 10, currentPage: p }">
-                              <div class="media-body">
-                                  <h4 class="media-heading text-rose ">{{event.Title}}  <small class="float-right" style="text-align: right">{{event.StartDateTime  | date : "fullDate" }}<br />{{event.StartDateTime  | date : "shortTime" }} to {{event.EndDateTime  | date : "shortTime" }}</small></h4>
-                                  <div *ngFor="let cat of event.categories;let i = index">
-                                  <span class="badge badge-pill badge-rose float-left mr-1">{{cat.CategoryTitle}}</span>
-                                  </div>
-                                  <br /><br />
-                                  <div innerHTML="{{event.Description}}"> </div>
+                    <div class="col align-self-end">
+                        <div *ngIf="services?.length > 0">
+                        <div id="FilterMenu" class="dropdown float-right dropleft">
+                            <button class="btn btn-default " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Filter&nbsp;&nbsp;<fa-icon [icon]="faFilter"></fa-icon>
+                            </button>
+                            <div id="FilterMenuLink" class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                    <a (click)="filterForeCasts('all')" class="dropdown-item" style="display: block;text-align: center;">All</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a  *ngFor="let service of services;let i = index" class="dropdown-item" style="display: block;text-align: center;" (click)="filterForeCasts($event.target.text)">{{service.CategoryTitle}}</a>
                                 </div>
-                                <a target="_blank" href="{{event.URL}}" class="btn btn-default btn-sm float-right">Book Now</a>
-                              <br /><br />
-                              <hr><br />
-                       
-                      </div>
-    
-                      <div class="col-lg-12"><br /><br />
-                          <pagination-controls (pageChange)="p = $event"></pagination-controls>
-                      
-               
-                 
-                  </div>
-    
-    
+                            </div>
+                          </div>
+                    </div>
                 </div>
+                <br /><br />
+               
+                <div  class="row"  *ngIf="events?.length > 0">
+             
+               
+                      <div class="col-lg-12" *ngFor="let event of events| paginate: { itemsPerPage: 10, currentPage: p }">
+                          <div class="media-body">
+                              <h4 class="media-heading text-rose ">{{event.Title}}  <small class="float-right" style="text-align: right">{{event.StartDateTime  | date : "fullDate" }}<br />{{event.StartDateTime  | date : "shortTime" }} to {{event.EndDateTime  | date : "shortTime" }}</small></h4>
+                              <div *ngFor="let cat of event.categories;let i = index">
+                              <span class="badge badge-pill badge-rose float-left mr-1">{{cat.CategoryTitle}}</span>
+                              </div>
+                              <br /><br />
+                              <div id="EventDescription" innerHTML="{{event.Description}}"> </div>
+                            </div>
+                            <a target="_blank" href="{{event.URL}}" class="btn btn-default btn-sm float-right">Book Now</a>
+                          <br /><br />
+                          <hr><br />
+                   
+                  </div>
+
+                  <div class="col-lg-12"><br /><br />
+                      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                  
+           
+             
+              </div>
+
+
+            </div>
               </div>
        
             </div>
