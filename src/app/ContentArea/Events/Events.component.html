@@ -54,14 +54,14 @@
                
                       <div class="col-lg-12" *ngFor="let event of events| paginate: { itemsPerPage: 10, currentPage: p }">
                           <div class="media-body">
-                              <h4 class="media-heading text-rose ">{{event.Title}}  <small class="float-right" style="text-align: right">{{event.StartDateTime  | date : "fullDate" }}<br />{{event.StartDateTime  | date : "shortTime" }} to {{event.EndDateTime  | date : "shortTime" }}</small></h4>
+                              <h4 class="media-heading text-rose ">{{event.Title}} </h4>
                               <div *ngFor="let cat of event.categories;let i = index">
                               <span class="badge badge-pill badge-rose float-left mr-1">{{cat.CategoryTitle}}</span>
                               </div>
-                              <br /><br />
-                              <div id="EventDescription" innerHTML="{{event.Description}}"> </div>
+                           {{event.StartDateTime  | date : "fullDate" }}, {{event.StartDateTime  | date : "shortTime" }} to {{event.EndDateTime  | date : "shortTime" }}<br />
+                            <br />  <div id="EventDescription" innerHTML="{{event.Description}}"> </div>
                             </div>
-                            <a target="_blank" href="{{event.URL}}" class="btn btn-default btn-sm float-right">Book Now</a>
+                            <a target="_blank" href="{{event.URL}}" class="btn btn-rose float-right">Sign up</a>
                           <br /><br />
                           <hr><br />
                    
