@@ -24,10 +24,10 @@ export class EventsComponent {
   ngOnInit() {
     const moment = require('moment');   
 
-    this.http.get("https://cms.justpeachysolutions.co.uk/categories?events.id_gte=1&_sort=CategoryTitle:ASC&events.StartDateTime_gte=" + moment().format('YYYY-MM-DD'))
+    this.http.get("https://cms.bodypositiveworks.com/categories?events.id_gte=1&_sort=CategoryTitle:ASC&events.StartDateTime_gte=" + moment().format('YYYY-MM-DD'))
     .subscribe((services) => this.services = services );
 
-    this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&_sort=StartDateTime:ASC")
+    this.http.get("https://cms.bodypositiveworks.com/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&_sort=StartDateTime:ASC")
     .subscribe((events) => this.Converter(events));
 
     require('readmore-js');
@@ -52,11 +52,11 @@ export class EventsComponent {
  filterForeCasts(filterVal: any) {
       if (filterVal == "all"){
         const moment = require('moment');     
-          this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&_sort=StartDateTime:ASC")
+          this.http.get("https://cms.bodypositiveworks.com/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&_sort=StartDateTime:ASC")
           .subscribe((events) => this.Converter(events));
       }else{
         const moment = require('moment');     
-        this.http.get("https://cms.justpeachysolutions.co.uk/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&categories.CategoryTitle=" + filterVal +  "&_sort=StartDateTime:ASC")
+        this.http.get("https://cms.bodypositiveworks.com/events?StartDateTime_gte=" + moment().format('YYYY-MM-DD') + "&categories.CategoryTitle=" + filterVal +  "&_sort=StartDateTime:ASC")
         .subscribe((events) => this.Converter(events));
       }
          require('readmore-js');
