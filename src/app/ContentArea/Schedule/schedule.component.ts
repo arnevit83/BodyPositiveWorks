@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
-declare var require: any
+declare var require: any;
 declare var $: any;
 
 @Component({

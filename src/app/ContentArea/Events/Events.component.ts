@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { faFilter } from '@fortawesome/free-solid-svg-icons';
-declare var require: any
+declare var require: any;
 declare var $: any;
 
 @Component({
@@ -31,9 +31,7 @@ export class EventsComponent {
     .subscribe((events) => this.Converter(events));
 
     require('readmore-js');
-    $(function() {
-      $('#EventDescription').readmore({ speed: 75, lessLink: '<a href="#">Hide Details</a>', moreLink: '<a href="#">View Details</a>' ,collapsedHeight: 28});
-    }); 
+
 
     }
 
