@@ -32,7 +32,7 @@
                   setTimeout(
                     function() 
                     {
-                      $('#EventDescription').readmore({ speed: 75, lessLink: '<a href=”#” >Hide Details</a>', moreLink: '<a href=”#” >View Details</a>' ,collapsedHeight: 28});
+                      $('.EventDescription').readmore({ speed: 75, lessLink: '<a href=”#” >Hide Details</a>', moreLink: '<a href=”#” >View Details</a>' ,collapsedHeight: 28});
    
                     }, 300);" class="nav-link" href="#Events" data-toggle="tab">
                   Events
@@ -85,7 +85,7 @@
                               </div>
                               {{event.StartDateTime  | date : "fullDate" }}, {{event.StartDateTime  | date : "shortTime" }} to {{event.EndDateTime  | date : "shortTime" }}
                           <br />  <br />
-                              <div id="EventDescription" innerHTML="{{event.Description}}"> </div>
+                              <div class="EventDescription" innerHTML="{{event.Description}}"> </div>
                             </div>
                            
                           <br />

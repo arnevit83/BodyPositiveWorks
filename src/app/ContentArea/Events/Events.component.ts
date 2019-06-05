@@ -44,7 +44,7 @@ export class EventsComponent {
     this.events = data
     require('readmore-js');
     $(function() {
-      $('#EventDescription').readmore({ speed: 75, lessLink: '<a href="#">Hide Details</a>', moreLink: '<a href="#">View Details</a>' ,collapsedHeight: 28});
+      $('.EventDescription').readmore({ speed: 75, lessLink: '<a href="#">Hide Details</a>', moreLink: '<a href="#">View Details</a>' ,collapsedHeight: 28});
     });
   }
  filterForeCasts(filterVal: any) {
@@ -59,7 +59,7 @@ export class EventsComponent {
       }
          require('readmore-js');
     $(function() {
-      $('#EventDescription p').readmore({ speed: 75, lessLink: '<a href="#">Read less</a>' });
+      $('.EventDescription').readmore({ speed: 75, lessLink: '<a href="#">Read less</a>' });
     });
   }
 
