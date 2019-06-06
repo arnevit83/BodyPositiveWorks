@@ -94,7 +94,9 @@
                   </div>
 
                   <div class="col-lg-12"><br /><br />
-                    <pagination-controls (pageChange)="p = $event" onclick="$('.EventDescription').readmore({ speed: 75, lessLink: '<a href=”#” >Hide Details</a>', moreLink: '<a href=”#” >View Details</a>' ,collapsedHeight: 28});"></pagination-controls>
+                    <pagination-controls (pageChange)="p = $event" onclick="$('.EventDescription').readmore({ speed: 75, lessLink: '<a href=”#” >Hide Details</a>', moreLink: '<a href=”#” >View Details</a>' ,collapsedHeight: 28});$([document.documentElement, document.body]).animate({
+                      scrollTop: $('.section').offset().top - 30
+                  }, 1000);"></pagination-controls>
                   
            
              
