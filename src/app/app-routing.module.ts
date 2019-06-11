@@ -74,7 +74,9 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'About-Us/Our-Mission', component: OurMissionComponent },
 { path: 'About-Us/Testimonials', component: TestimonialsComponent },
 
-{ path: 'Events', component: EventsComponent },
+{ path: 'Events', component: EventsComponent , data: {
+  preload: true
+}},
 { path: 'Schedule', component: ScheduleComponent },
 
 

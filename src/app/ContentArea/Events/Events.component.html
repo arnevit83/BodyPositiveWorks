@@ -57,8 +57,11 @@
                               <h4 class="media-heading text-rose ">{{event.Title}}    <a target="_blank" href="{{event.URL}}" class="btn btn-rose float-right">Sign up</a></h4>
                               <div *ngFor="let cat of event.categories;let i = index">
                               <span class="badge badge-pill badge-rose float-left mr-1">{{cat.CategoryTitle}}</span>
-                              </div>
-                           {{event.StartDateTime  | date : "fullDate" }}, {{event.StartDateTime  | date : "shortTime" }} to {{event.EndDateTime  | date : "shortTime" }}<br />
+                              </div> 
+                           {{event.StartDateTime}},  {{event.StartTime  }} to {{event.EndDateTime }}
+                           
+                           
+                           <br />
                             <br />  <div class="EventDescription" innerHTML="{{event.Description}}"> </div>
                             </div>
                          
@@ -68,10 +71,12 @@
                   </div>
 
                   <div class="col-lg-12"><br /><br />
+
                       <pagination-controls (pageChange)="p = $event" onclick="$('.EventDescription').readmore({ speed: 75, lessLink: '<a href=”#” >Hide Details</a>', moreLink: '<a href=”#” >View Details</a>' ,collapsedHeight: 28});$([document.documentElement, document.body]).animate({
                         scrollTop: $('.section').offset().top - 30
                     }, 1000);"></pagination-controls>
                   
+  
            
              
               </div>

@@ -83,8 +83,9 @@
                                <div *ngFor="let cat of event.categories;let i = index">
                               <span class="badge badge-pill badge-rose float-left mr-1">{{cat.CategoryTitle}}</span>
                               </div>
-                              {{event.StartDateTime  | date : "fullDate" }}, {{event.StartDateTime  | date : "shortTime" }} to {{event.EndDateTime  | date : "shortTime" }}
-                          <br />  <br />
+                              {{event.StartDateTime}}, <br class="hidden-xs" />{{event.StartTime  }} to {{event.EndDateTime }}
+                           
+                              <br />  <br />
                               <div class="EventDescription" innerHTML="{{event.Description}}"> </div>
                             </div>
                            
