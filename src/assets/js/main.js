@@ -1,4 +1,22 @@
 /*! Custom * !*/
+function CloseMobilemenu() {
+  $('html').removeClass('nav-open');
+  materialKit.misc.navbar_menu_visible = 0;
+  $('#bodyClick').remove();
+  if (typeof $toggle != 'undefined') {
+    setTimeout(function() {
+      $toggle.removeClass('toggled');
+    }, 550);
+    $('html').removeClass('nav-open-absolute');
+  }
+  $(".dropdown-item").click(function(event) {
+    CloseMobilemenu();
+  });
+  $(".mobile-close").click(function(event) {
+    CloseMobilemenu();
+  });
+};
+CloseMobilemenu();
 
 setTimeout(function(){ 
 
@@ -95,24 +113,7 @@ setTimeout(function(){
   //   }
   // }
 
-  function CloseMobilemenu() {
-    $('html').removeClass('nav-open');
-    materialKit.misc.navbar_menu_visible = 0;
-    $('#bodyClick').remove();
-    if (typeof $toggle != 'undefined') {
-      setTimeout(function() {
-        $toggle.removeClass('toggled');
-      }, 550);
-      $('html').removeClass('nav-open-absolute');
-    }
-    $(".dropdown-item").click(function(event) {
-      CloseMobilemenu();
-    });
-    $(".mobile-close").click(function(event) {
-      CloseMobilemenu();
-    });
-  };
-CloseMobilemenu();
+
   function galleryfeedkFunc() {
     window.setTimeout(function() {
       $(".gallery-feed").find("a").replaceWith(function() {

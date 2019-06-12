@@ -803,3 +803,6 @@ b, strong {
   [data-readmore-toggle]{
     color: #e91e63!important;
   }
+  .dropdown-menu {
+    z-index: 25000 !important;
+  }
