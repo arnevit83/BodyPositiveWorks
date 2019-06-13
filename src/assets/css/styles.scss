@@ -5,6 +5,8 @@
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import '~bootstrap/scss/_spinners';
+
+
 $enable-flex: true; // fully adopt flexbox layouts
 $enable-shadows: true; // enable shadows, set to false to turn off shadows
 //// Variables for material-kit
@@ -46,7 +48,7 @@ $enable-shadows: true; // enable shadows, set to false to turn off shadows
 @import "~material-kit/assets/scss/material-kit/forms";
 @import "~material-kit/assets/scss/material-kit/input-group";
 @import "~material-kit/assets/scss/material-kit/list-group";
-@import "~material-kit/assets/scss/material-kit/nav";
+
 @import "~material-kit/assets/scss/material-kit/images";
 @import "~material-kit/assets/scss/material-kit/navbar";
 @import "~material-kit/assets/scss/material-kit/badges";
@@ -73,6 +75,7 @@ $enable-shadows: true; // enable shadows, set to false to turn off shadows
 @import '~material-kit/assets/scss/material-kit/plugins/plugin-datetime-picker';
 @import '~material-kit/assets/scss/material-kit/plugins/plugin-nouislider'; // Sections
 @import "~material-kit/assets/scss/material-kit/responsive"; //
+@import "~material-kit/assets/scss/material-kit/nav";
 //// Overrides
 //
 
@@ -342,7 +345,7 @@ a {
 
 #vertical-nav a span {
   float            : right;
-  display          : inline-block;
+ 
   -webkit-transform: scale(0.6);
   -moz-transform   : scale(0.6);
   -ms-transform    : scale(0.6);

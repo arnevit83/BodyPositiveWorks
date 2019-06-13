@@ -41,7 +41,7 @@
               "node_modules/moment/min/moment.min.js",
               "node_modules/material-kit/assets/js/plugins/bootstrap-datetimepicker.js",
               "node_modules/material-kit/assets/js/core/bootstrap-material-design.min.js",
-              "node_modules/material-kit/assets/js/material-kit.js",
+              "node_modules/material-kit/assets/js/material-kit.min.js",
               "node_modules/readmore-js/readmore.min.js",
               "src/assets/js/main.js",
               "src/assets/js/onload.js"
@@ -108,7 +108,7 @@
               "node_modules/moment/min/moment.min.js",
               "node_modules/material-kit/assets/js/plugins/bootstrap-datetimepicker.js",
               "node_modules/material-kit/assets/js/core/bootstrap-material-design.min.js",
-              "node_modules/material-kit/assets/js/material-kit.js",
+              "node_modules/material-kit/assets/js/material-ki.min.js",
               "node_modules/readmore-js/readmore.min.js",
               "src/assets/js/main.js",
               "src/assets/js/onload.js"
