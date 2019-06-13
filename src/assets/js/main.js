@@ -19,7 +19,17 @@ function CloseMobilemenu() {
     CloseMobilemenu();
   });
 };
+if($(window).width() >= 991){
+  if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
 
+    $(".dropdown").hover(function(event) {
+ 
+      $(this).find(".dropdown-menu").addClass("show");
+   
+  },function () {$(this).find(".dropdown-menu").removeClass("show");});
+  }
+
+}
 
 CloseMobilemenu();
   $(".app-loading").hide();
