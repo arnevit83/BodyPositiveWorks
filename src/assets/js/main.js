@@ -1,4 +1,7 @@
 /*! Custom * !*/
+
+
+setTimeout(function(){ 
 function CloseMobilemenu() {
   $('html').removeClass('nav-open');
   materialKit.misc.navbar_menu_visible = 0;
@@ -16,10 +19,9 @@ function CloseMobilemenu() {
     CloseMobilemenu();
   });
 };
+
+
 CloseMobilemenu();
-
-setTimeout(function(){ 
-
   $(".app-loading").hide();
   
   function isValidEmailAddress(emailAddress) {
