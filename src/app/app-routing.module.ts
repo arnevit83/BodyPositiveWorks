@@ -7,6 +7,8 @@ import { HomeComponent } from './ContentArea/app.Home';
 import { YogaComponent } from './ContentArea/Services/yoga/yoga.component';
 import { PsychotherapyComponent } from './ContentArea/Services/Psychotherapy/Psychotherapy.component';
 import { ReikiComponent } from './ContentArea/Services/reiki/reiki.component';
+import { HomeopathyComponent } from './ContentArea/Services/homeopathy/homeopathy.component';
+
 import { PilatesComponent } from './ContentArea/Services/pilates/pilates.component';
 import { NutritionComponent } from './ContentArea/Services/nutrition/nutrition.component';
 import { MassageComponent } from './ContentArea/Services/Massage/Massage.component';
@@ -47,6 +49,7 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'Services/Yoga', component: YogaComponent },
 { path: 'Services/Psychotherapy', component: PsychotherapyComponent },
 { path: 'Services/Reiki', component: ReikiComponent },
+{ path: 'Services/Homeopathy', component: HomeopathyComponent },
 { path: 'Services/Pilates', component: PilatesComponent },
 { path: 'Services/Nutrition', component: NutritionComponent },
 { path: 'Services/Massage', component: MassageComponent },

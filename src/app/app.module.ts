@@ -32,6 +32,7 @@ import { NutritionComponent } from './ContentArea/Services/nutrition/nutrition.c
 import { PilatesComponent } from './ContentArea/Services/pilates/pilates.component';
 import { PsychotherapyComponent } from './ContentArea/Services/Psychotherapy/Psychotherapy.component';
 import { ReikiComponent } from './ContentArea/Services/reiki/reiki.component';
+import { HomeopathyComponent } from './ContentArea/Services/homeopathy/homeopathy.component';
 
 import { AddictionComponent } from './ContentArea/Expertise/addiction/addiction.component';
 import { DepressionComponent } from './ContentArea/Expertise/depression/depression.component';
@@ -73,6 +74,7 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
     PilatesComponent,
     PsychotherapyComponent,
     ReikiComponent,
+    HomeopathyComponent,
     AddictionComponent,
     AnxietyComponent,
     EatingDisordersComponent,
