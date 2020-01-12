@@ -46,10 +46,6 @@
       "src": "assets/icons/logo512x512.png",
       "sizes": "512x512",
       "type": "image/png"
-    },
-    {
-    "src": "assets/icons/logo-vector.svg",
-    "sizes": "36x36 48x48 72x72 96x96 144x144 192x192"
     }
   ]
 }
