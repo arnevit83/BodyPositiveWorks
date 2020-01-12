@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Header/app.Header';
 
 import {NgxPaginationModule} from 'ngx-pagination';
+import { Globals } from './globals';
 
 import { SignupComponent } from './Footer/app.Signup';
 import { FooterComponent } from './Footer/app.Footer';
@@ -102,7 +103,7 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
     HttpClientModule ,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
-  providers: [Title],
+  providers: [Title, Globals],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
