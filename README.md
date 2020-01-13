@@ -24,6 +24,7 @@ websites@duncanpeach.com
 
 * [Menu](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/BoPoMenu.pdf)
 * [WorkFlow](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/BoPoWorkswebsite.pdf)
+* [Blog](https://github.com/arnevit83/BodyPositiveWorks/blob/master/website_struture/Blog.png)
 
 ## Copyright
 
