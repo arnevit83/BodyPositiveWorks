@@ -2,5 +2,11 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Globals {
-  CMSURL: string = 'https://cms.justpeachysolutions.co.uk';
+ /*  Dev */
+//  CMSURL: string = 'https://cms.justpeachysolutions.co.uk';
+  
+ /*  Live */
+ CMSURL: string = 'https://cms.bodypositiveworks.com';
+
+
 }
