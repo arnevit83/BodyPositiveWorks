@@ -14,7 +14,7 @@ export class HeaderComponent {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const eventUrl = event.urlAfterRedirects.split(/[\s,]+/);
-        var currentRoute = (eventUrl || ['THE FEEL GOOD PLACE']).join().replace('-', ' ').replace('-', ' ').split("?")[0]
+        var currentRoute = (eventUrl || ['THE FEEL GOOD PLACE']).join().replace('-', ' ').replace('-', ' ').replace('%20', ' ').split("?")[0]
         if (currentRoute === "/"){
           this.TitleSubText = "The Feel Good Place";
         }else{

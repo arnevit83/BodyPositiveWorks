@@ -39,6 +39,7 @@ import { TestimonialsComponent } from './ContentArea/Aboutus/testimonials/testim
 import { EventsComponent } from './ContentArea/Events/Events.component';
 import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
 
+import { BlogComponent } from './ContentArea/Blog/Blog.component';
 
 
 
@@ -83,10 +84,8 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'Schedule', component: ScheduleComponent },
 
 
-
-
-
-
+{ path: 'Blog/:id', component: BlogComponent },
+{ path: 'Blog', redirectTo: '/', pathMatch: 'full' },
 
 
 
@@ -97,3 +96,34 @@ const routes: Routes = [{ path: '', component: HomeComponent },
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [
+
+    YogaComponent,
+    ArtTherapyComponent,
+    AyurvedaComponent,
+    ChiropracticComponent,
+    BodyworkComponent,
+    MeditationComponent,
+    NutritionComponent,
+    PilatesComponent,
+    PsychotherapyComponent,
+    ReikiComponent,
+    HomeopathyComponent,
+    AddictionComponent,
+    AnxietyComponent,
+    EatingDisordersComponent,
+    NegativeBodyImageComponent,
+    PricingAndBundlesComponent,
+    UseOurSpaceComponent,
+    MassageComponent,
+    ContactUsComponent,
+    FoundersBiosComponent,
+    OurMissionComponent,
+    TestimonialsComponent,
+    OutreachComponent,
+    CommunityComponent,
+    DepressionComponent,
+    ScheduleComponent,
+    EventsComponent,
+    BlogComponent
+]
