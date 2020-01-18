@@ -1,0 +1,30 @@
+<div class="container" *ngIf="Articles?.length == 0">
+  <div class="row text-center">
+    <div class="col-md-8 ml-auto mr-auto"> <br /><br />
+      <h2 class="h4fix">
+        No available article found
+      </h2>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="row text-center">
+      <div class="col-md-8 ml-auto mr-auto"> <br /><br />
+        <h1 class="h2fix">  {{ Articles.Title }}
+        </h1><br />
+        <h2 class="h4fix">
+     
+          {{ Articles.Description }}
+
+        </h2>
+
+      </div>
+    </div>
+
+  </div>
+ 
+
+
+

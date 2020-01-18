@@ -40,7 +40,7 @@ import { EventsComponent } from './ContentArea/Events/Events.component';
 import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
 
 import { BlogComponent } from './ContentArea/Blog/Blog.component';
-
+import { ArticleComponent } from './ContentArea/Blog/Article.component';
 
 
 
@@ -83,8 +83,9 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 }},
 { path: 'Schedule', component: ScheduleComponent },
 
-
+{ path: 'Article/:id', component: ArticleComponent },
 { path: 'Blog/:id', component: BlogComponent },
+
 { path: 'Blog', redirectTo: '/', pathMatch: 'full' },
 
 
@@ -125,5 +126,6 @@ export const routingComponents = [
     DepressionComponent,
     ScheduleComponent,
     EventsComponent,
-    BlogComponent
+    BlogComponent,
+    ArticleComponent
 ]

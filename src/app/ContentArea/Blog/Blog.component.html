@@ -1,2 +1,50 @@
 
-<h3>You selected Cat = {{departmentId}}</h3>
+  <div class="container" *ngIf="Blogarticles?.length > 0">
+    <div class="row text-center">
+      <div class="col-md-8 ml-auto mr-auto"> <br /><br />
+        <h1 class="h2fix"> {{Blogarticles[0].blogcategory.Title}}
+        </h1>
+        <h2 class="h4fix">
+          {{Blogarticles[0].blogcategory.Description}}
+        </h2><br /><hr>
+      </div>
+    </div>
+  </div>
+  <div class="container" *ngIf="Blogarticles?.length == 0">
+    <div class="row text-center">
+      <div class="col-md-8 ml-auto mr-auto"> <br /><br />
+        <h2 class="h4fix">
+          No available articles found
+        </h2>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="row" *ngIf="Blogarticles?.length > 0">
+    <div class="col-lg-12" *ngFor="let Blogarticle of Blogarticles| paginate: { itemsPerPage: 10, currentPage: p }">
+      <div class="media-body">
+        <a routerLink="/Article/{{Blogarticle.Title}}" routerLinkActive="active"
+          class="dropdown-item">
+          <h4 class="media-heading text-rose ">{{Blogarticle.Title}}</h4>
+          <img width="400px" src="{{this.globals.CMSURL}}{{Blogarticle.Image.url}}">
+        </a>
+      </div>
+    </div>
+
+    <div class="col-lg-12"><br /><br />
+
+      <pagination-controls (pageChange)="p = $event" onclick="$('.EventDescription').readmore({ speed: 75, lessLink: '<a href=”#” >Hide Details</a>', moreLink: '<a href=”#” >View Details</a>' ,collapsedHeight: 28});$([document.documentElement, document.body]).animate({
+          scrollTop: $('.section').offset().top - 30
+      }, 1000);"></pagination-controls>
+
+    </div>
+  </div>
+
+
