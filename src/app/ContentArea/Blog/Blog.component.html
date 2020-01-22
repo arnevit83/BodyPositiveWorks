@@ -2,10 +2,10 @@
   <div class="container" *ngIf="Blogarticles?.length > 0">
     <div class="row text-center">
       <div class="col-md-8 ml-auto mr-auto"> <br /><br />
-        <h1 class="h2fix"> {{Blogarticles[0].blogcategory.Title}}
+        <h1 class="h2fix"> {{Blogarticles[0].blogcategory.title}}
         </h1>
         <h2 class="h4fix">
-          {{Blogarticles[0].blogcategory.Description}}
+          {{Blogarticles[0].blogcategory.description}}
         </h2><br /><hr>
       </div>
     </div>
@@ -20,20 +20,13 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
   <div class="row" *ngIf="Blogarticles?.length > 0">
     <div class="col-lg-12" *ngFor="let Blogarticle of Blogarticles| paginate: { itemsPerPage: 10, currentPage: p }">
       <div class="media-body">
-        <a routerLink="/Article/{{Blogarticle.Title}}" routerLinkActive="active"
+        <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active"
           class="dropdown-item">
-          <h4 class="media-heading text-rose ">{{Blogarticle.Title}}</h4>
-          <img width="400px" src="{{this.globals.CMSURL}}{{Blogarticle.Image.url}}">
+          <h4 class="media-heading text-rose ">{{Blogarticle.title}}</h4>
+          <img width="400px" src="{{this.globals.CMSURL}}{{Blogarticle.image.url}}">
         </a>
       </div>
     </div>

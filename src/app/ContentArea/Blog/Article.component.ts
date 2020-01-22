@@ -33,7 +33,7 @@ export class ArticleComponent {
     const moment = require('moment');  
     this.ArticlesID = this.route.snapshot.paramMap.get('id');
 
-    this.http.get(this.globals.CMSURL + "/blogarticles?Title=" + this.ArticlesID + "").subscribe((Articles) => this.Converter(Articles));
+    this.http.get(this.globals.CMSURL + "/blogarticles?title=" + this.ArticlesID + "").subscribe((Articles) => this.Converter(Articles));
   }
 
 
@@ -49,9 +49,9 @@ export class ArticleComponent {
     //  data[i].StartTime  =   moment(data[i].StartDateTime).format("LT");  
     //  data[i].StartDateTime  =moment(data[i].StartDateTime).format("LL");  
     // }
-    this.meta.updateTag({ name: 'description', content: this.Articles.SEODescription });
-    this.meta.updateTag({ name: 'keywords', content: this.Articles.Title });
-    this.titleService.setTitle(this.Articles.blogcategory.Title + " - " + this.Articles.Title);
+    this.meta.updateTag({ name: 'description', content: this.Articles.seodescription });
+    this.meta.updateTag({ name: 'keywords', content: this.Articles.title });
+    this.titleService.setTitle(this.Articles.blogcategory.title + " - " + this.Articles.title);
 
 
 }
