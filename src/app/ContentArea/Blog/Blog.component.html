@@ -26,7 +26,18 @@
         <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active"
           class="dropdown-item">
           <h4 class="media-heading text-rose ">{{Blogarticle.title}}</h4>
-          <img width="400px" src="{{this.globals.CMSURL}}{{Blogarticle.image.url}}">
+          <img width="400px" src="">
+
+          <picture>
+            <source srcset="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.webp" type="image/webp">
+            <source srcset="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.png" type="image/png">
+            <img src="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.png" alt="" class="img">
+          </picture>
+         
+          <!-- <div class="colored-shadow" style="background-image: url('{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.png'); opacity: 1;  top: 20px;-webkit-transform: scale(0.97);transform: scale(0.97);"></div> -->
+      
+
+
         </a>
       </div>
     </div>
