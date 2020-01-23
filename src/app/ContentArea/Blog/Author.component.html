@@ -1,19 +1,17 @@
 
-  <div class="container" *ngIf="Blogarticles?.length > 0">
-      <div class="row text-center">
-        <div class="col-md-8 ml-auto mr-auto"> <br /><br />
-          <h1 class="h2fix">{{Blogarticles[0].blogcategory.title}}
-            </h1><br />  
-          <h2 class="h4fix"> 
-            {{Blogarticles[0].blogcategory.description}}
-          </h2>
-          <br /> <hr>
+  <!--   <div class="container" *ngIf="BlogcategoriesAuthors?.length > 0">
+        <div class="row text-center">
+          <div class="col-md-8 ml-auto mr-auto"> <br /><br />
+            <h1 class="h2fix">{{BlogcategoriesAuthors[0].blogauthors.name}}
+              </h1><br />  
+    
+            <br /> <hr>
+          </div>
         </div>
       </div>
-    </div>
-   
+      -->
 
-  <div class="container" *ngIf="Blogarticles?.length == 0">
+  <div class="container" *ngIf="BlogcategoriesAuthors?.length == 0">
     <div class="row text-center">
       <div class="col-md-8 ml-auto mr-auto"> <br /><br />
         <h2 class="h4fix">
@@ -23,8 +21,8 @@
     </div>
   </div>
  <div class="container section">
-  <div class="row" *ngIf="Blogarticles?.length > 0">
-    <div class="col-md-10 ml-auto mr-auto" *ngFor="let Blogarticle of Blogarticles| paginate: { itemsPerPage: 10, currentPage: p }; let odd=odd; let even=even;" >
+  <div class="row" *ngIf="BlogcategoriesAuthors?.length > 0">
+    <div class="col-md-10 ml-auto mr-auto" *ngFor="let Blogarticle of BlogcategoriesAuthors| paginate: { itemsPerPage: 10, currentPage: p }; let odd=odd; let even=even;" >
       <div class="card card-plain card-blog">
         <div class="row"  [ngClass]="{ odd: odd, even: even }">
           <div class="col-md-5">
@@ -42,7 +40,7 @@
           </div>
           <div class="col-md-7">
           
-            <h6 class="card-category text-rose">{{Blogarticles[0].blogcategory.title}}</h6>
+            <h6 class="card-category text-rose">{{BlogcategoriesAuthors[0].blogcategory.title}}</h6>
             <h3 class="BlogTitle" >
               <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active">{{Blogarticle.title}}</a>
             </h3>
@@ -50,10 +48,7 @@
               <span innerHTML="{{(Blogarticle.description.length>250)? (Blogarticle.description | slice:0:250)+'..':(Blogarticle.description) }}"> </span>
               <a  routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active"> Read More </a>
             </p>
-            <p class="author">
-              by&nbsp;<a  routerLink="/Author/{{Blogarticle.blogauthors.name}}" routerLinkActive="active"><b>{{Blogarticle.blogauthors.name}}</b>
-              </a>, {{Blogarticle.created_at}} 
-            </p>
+          
           </div>
         </div>
       </div>

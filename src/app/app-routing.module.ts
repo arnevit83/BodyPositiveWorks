@@ -41,6 +41,8 @@ import { ScheduleComponent } from './ContentArea/Schedule/schedule.component';
 
 import { BlogComponent } from './ContentArea/Blog/Blog.component';
 import { ArticleComponent } from './ContentArea/Blog/Article.component';
+import { AuthorComponent } from './ContentArea/Blog/Author.component';
+
 
 
 
@@ -84,6 +86,7 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'Schedule', component: ScheduleComponent },
 
 { path: 'Article/:id', component: ArticleComponent },
+{ path: 'Author/:id', component: AuthorComponent },
 { path: 'Blog/:id', component: BlogComponent },
 
 { path: 'Blog', redirectTo: '/', pathMatch: 'full' },
@@ -127,5 +130,6 @@ export const routingComponents = [
     ScheduleComponent,
     EventsComponent,
     BlogComponent,
-    ArticleComponent
+    ArticleComponent,
+    AuthorComponent
 ]
