@@ -39,16 +39,16 @@ export class ArticleComponent {
 
   Converter(data: any){
     this.Articles = data[0]
-    // var showdown  = require('showdown');
+     var showdown  = require('showdown');
     // const moment = require('moment');    
     // moment.locale(); 
-    // let converter = new showdown.Converter();
-    // for(let i = 0; i < data.length; i++){
-    //  data[i].Description = converter.makeHtml(data[i].Description);
+     let converter = new showdown.Converter();
+     for(let i = 0; i < data.length; i++){
+      data[i].description = converter.makeHtml(data[i].description);
     //  data[i].EndDateTime  =  moment(data[i].EndDateTime).format("LT");  
     //  data[i].StartTime  =   moment(data[i].StartDateTime).format("LT");  
     //  data[i].StartDateTime  =moment(data[i].StartDateTime).format("LL");  
-    // }
+     }
     this.meta.updateTag({ name: 'description', content: this.Articles.seodescription });
     this.meta.updateTag({ name: 'keywords', content: this.Articles.title });
     this.titleService.setTitle(this.Articles.blogcategory.title + " - " + this.Articles.title);

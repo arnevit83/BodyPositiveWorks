@@ -15,9 +15,9 @@
         <h1 class="h2fix">  {{ Articles.title }}
         </h1><br />
         <h2 class="h4fix">
+          <div innerHTML="{{ Articles.description }}"> </div>
+          
      
-          {{ Articles.description }}
-    
       
           <picture>
             <source srcset="{{this.globals.CMSURL}}{{Articles.image.url}}thumbFull.webp" type="image/webp">

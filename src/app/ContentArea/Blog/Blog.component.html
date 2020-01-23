@@ -1,15 +1,18 @@
 
   <div class="container" *ngIf="Blogarticles?.length > 0">
-    <div class="row text-center">
-      <div class="col-md-8 ml-auto mr-auto"> <br /><br />
-        <h1 class="h2fix"> {{Blogarticles[0].blogcategory.title}}
-        </h1>
-        <h2 class="h4fix">
-          {{Blogarticles[0].blogcategory.description}}
-        </h2><br /><hr>
+      <div class="row text-center">
+        <div class="col-md-8 ml-auto mr-auto"> <br /><br />
+          <h1 class="h2fix">{{Blogarticles[0].blogcategory.title}}
+            </h1><br />  
+          <h2 class="h4fix"> 
+            {{Blogarticles[0].blogcategory.description}}
+          </h2>
+          <br /> <hr><br /><br />
+        </div>
       </div>
     </div>
-  </div>
+   
+
   <div class="container" *ngIf="Blogarticles?.length == 0">
     <div class="row text-center">
       <div class="col-md-8 ml-auto mr-auto"> <br /><br />
@@ -19,36 +22,49 @@
       </div>
     </div>
   </div>
-
+ <div class="container section">
   <div class="row" *ngIf="Blogarticles?.length > 0">
-    <div class="col-lg-12" *ngFor="let Blogarticle of Blogarticles| paginate: { itemsPerPage: 10, currentPage: p }">
-      <div class="media-body">
-        <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active"
-          class="dropdown-item">
-          <h4 class="media-heading text-rose ">{{Blogarticle.title}}</h4>
-          <img width="400px" src="">
+    <div class="col-md-10 ml-auto mr-auto" *ngFor="let Blogarticle of Blogarticles| paginate: { itemsPerPage: 10, currentPage: p }; let odd=odd; let even=even;" >
+      <div class="card card-plain card-blog">
+        <div class="row"  [ngClass]="{ odd: odd, even: even }">
+          <div class="col-md-5">
+            <div class="card-header card-header-image">
+              <a  routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active">
+                <picture>
+                  <source srcset="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.webp" type="image/webp">
+                  <source srcset="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.png" type="image/png">
+                  <img src="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.png" alt="" class="img">
+                </picture>
+              </a>
+              
+              <div class="colored-shadow" [ngStyle]="{'background-image': 'url(' + this.globals.CMSURL +  Blogarticle.image.url  + 'thumbSmall.png)','opacity':'1'}" >
 
-          <picture>
-            <source srcset="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.webp" type="image/webp">
-            <source srcset="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.png" type="image/png">
-            <img src="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.png" alt="" class="img">
-          </picture>
-         
-          <!-- <div class="colored-shadow" style="background-image: url('{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.png'); opacity: 1;  top: 20px;-webkit-transform: scale(0.97);transform: scale(0.97);"></div> -->
-      
-
-
-        </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7">
+          
+            <h6 class="card-category text-rose">{{Blogarticles[0].blogcategory.title}}</h6>
+            <h3 class="BlogTitle" >
+              <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active">{{Blogarticle.title}}</a>
+            </h3>
+            <p class="card-description">
+              <span innerHTML="{{(Blogarticle.description.length>350)? (Blogarticle.description | slice:0:350)+'..':(Blogarticle.description) }}"> </span>
+              
+              <a  routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active"> Read More </a>
+            </p>
+            <p class="author"><br />
+              by&nbsp;<a  routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active"><b>{{Blogarticle.blogauthors.name}}</b>
+              </a>, {{Blogarticle.created_at}} 
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="col-lg-12"><br /><br />
-
-      <pagination-controls (pageChange)="p = $event" onclick="$('.EventDescription').readmore({ speed: 75, lessLink: '<a href=”#” >Hide Details</a>', moreLink: '<a href=”#” >View Details</a>' ,collapsedHeight: 28});$([document.documentElement, document.body]).animate({
-          scrollTop: $('.section').offset().top - 30
-      }, 1000);"></pagination-controls>
-
-    </div>
+  
   </div>
-
-
+  <div class="col-lg-12 text-center"><br /><br />
+    <pagination-controls (pageChange)="p = $event" onclick="$([document.documentElement, document.body]).animate({
+        scrollTop: $('.section').offset().top - 30
+    }, 1000);"></pagination-controls>
+     </div>
+</div>

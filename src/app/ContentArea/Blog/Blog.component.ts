@@ -50,16 +50,15 @@ export class BlogComponent {
 }
 Converter(data: any){
   this.Blogarticles = data
-  // var showdown  = require('showdown');
-  // const moment = require('moment');    
-  // moment.locale(); 
-  // let converter = new showdown.Converter();
-  // for(let i = 0; i < data.length; i++){
-  //  data[i].Description = converter.makeHtml(data[i].Description);
-  //  data[i].EndDateTime  =  moment(data[i].EndDateTime).format("LT");  
-  //  data[i].StartTime  =   moment(data[i].StartDateTime).format("LT");  
-  //  data[i].StartDateTime  =moment(data[i].StartDateTime).format("LL");  
-  // }
+   var showdown  = require('showdown');
+   const moment = require('moment');    
+   moment.locale(); 
+   let converter = new showdown.Converter();
+   for(let i = 0; i < data.length; i++){
+    data[i].description = converter.makeHtml(data[i].description);
+    //val = $showdown.makeHtml($sanitize(newValue));
+    data[i].created_at  =   moment(data[i].StartDateTime).startOf('day').fromNow(); 
+   }
 
   if(this.Blogarticles.length > 0)  {
     this.meta.updateTag({ name: 'description', content: this.Blogarticles[0].blogcategory.seodescription });
