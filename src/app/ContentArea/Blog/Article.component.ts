@@ -34,7 +34,7 @@ export class ArticleComponent {
     const moment = require('moment');  
     this.ArticlesID = this.route.snapshot.paramMap.get('id');
 
-    this.http.get(this.globals.CMSURL + '/blogarticles?title=' + this.ArticlesID + '').subscribe((Articles) => this.Converter(Articles));
+    this.http.get(this.globals.CMSURL + '/findCat?title=' + this.ArticlesID + '').subscribe((Articles) => this.Converter(Articles));
 
     
     // $(function() {
