@@ -70,7 +70,7 @@
       </li>
 
 
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown" *ngIf="categories?.length > 0">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="ServicesDropdown" role="button" aria-haspopup="true" aria-expanded="false">
         Blog
       </a>
@@ -81,7 +81,7 @@
         </div>
       
       </div>
- 
+      </li>
 
       <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="AboutDropdown" role="button" aria-haspopup="true" aria-expanded="false">

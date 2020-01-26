@@ -209,35 +209,35 @@ top:0;
 //   animation-delay        : 35.2s;
 // }
 
-#SliderBanner picture:nth-of-type(1) {
+#SliderBanner div picture:nth-of-type(1) {
   -webkit-animation-delay: 29.4s;
   -moz-animation-delay   : 29.4s;
   -o-animation-delay     : 29.4s;
   animation-delay        : 29.4s;
 }
 
-#SliderBanner picture:nth-of-type(2) {
+#SliderBanner  div picture:nth-of-type(2) {
   -webkit-animation-delay: 19.6s;
   -moz-animation-delay   : 19.6s;
   -o-animation-delay     : 19.6s;
   animation-delay        : 19.6s;
 }
 
-#SliderBanner picture:nth-of-type(3) {
+#SliderBanner  div picture:nth-of-type(3) {
   -webkit-animation-delay: 9.8s;
   -moz-animation-delay   : 9.8s;
   -o-animation-delay     : 9.8s;
   animation-delay        : 9.8s;
 }
 
-#SliderBanner picture:nth-of-type(4) {
+#SliderBanner  div picture:nth-of-type(4) {
   -webkit-animation-delay: 0;
   -moz-animation-delay   : 0;
   -o-animation-delay     : 0;
   animation-delay        : 0;
 }
 
-.Home #SliderBanner picture img {
+.Home #SliderBanner div picture img {
   height: 100%!important;
 }
 

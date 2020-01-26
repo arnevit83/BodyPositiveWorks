@@ -1,0 +1,41 @@
+.BlogTitle a{
+    color: rgb(60, 72, 88)!important;
+    }
+    .BlogTitle{
+        margin-top: -8px!important;
+    }
+    .odd { flex-direction: row-reverse; }
+    
+    .badge:focus{
+        color: white;
+    }
+    
+    .card-norm{
+        margin-top: 7px!important;
+    }
+    .badge:hover{
+        color: white;
+    }
+    .listfeature li:first-child{
+        
+            border-top-left-radius: 0rem!important;
+            border-top-right-radius: 0rem!important;
+            margin-right: 0px!important;
+        
+    }
+    .listfeature li a:first-child{
+        
+    
+        margin-right: 0px!important;
+    
+    }
+    .listfeature{
+    padding-bottom: 0px!important;
+    }
+    
+.tags .active{
+    background-color: #d81558;
+    }
+    
+    
+    

@@ -6,6 +6,10 @@ import { HttpClient } from '@angular/common/http';
 
 import { Globals } from '../../globals';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
+import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faTag } from '@fortawesome/free-solid-svg-icons';
+
+
 
 declare var require: any;
 declare var $: any;
@@ -18,6 +22,8 @@ declare var $: any;
   styleUrls: ['./Tag.component.scss']
 })
 export class TagComponent {
+  faChevronDown = faAngleDoubleLeft;
+  faTags = faTag;
   globals: Globals;
   public Blogarticles: any;
   public BlogTags = [];
@@ -34,15 +40,15 @@ export class TagComponent {
 
     this.BlogcategoriesID = params.get('id');
    // this.BlogarticlesID = params.get('aid');
-    
+   this.titleService.setTitle( "Holistic Health & Wellness Center – Bergen County NJ" );
+   this.meta.updateTag({ name: 'description', content: 'Holistic one stop health & wellness center. Feel good inside & out with our integrated services, programs & classes. Our licensed therapists specialize in anxiety, depression, negative body image, eating disorders, & substance addiction. Nutritionists, psychotherapists, massage, yoga, Pilates & more.' });
+   this.meta.updateTag({ name: 'keywords', content: 'Yoga NJ, Yoga Bergen County, Yoga Saddle River NJ, Chiropractor NJ, Chiropractor Bergen County, Nutritionist nj, Nutritionist bergen county nj, Psychotherapy NJ, Psychotherapy in Bergen County NJ, Massage places NJ, Massage Westfield NJ, Massage Fair Lawn NJ, Pilates NJ, Pilates classes Bergen County NJ' });
+
     
     this.http.get(this.globals.CMSURL + "/findCat?blogtags.tag=" + this.BlogcategoriesID + "&_sort=created_at:ASC").subscribe((Blogarticles) => this.Converter(Blogarticles));
 
 
     
-
-console.warn("ss")
-
     // this.Blogarticles.subscribe(next => {localStorage[CACHE_KEY] = JSON.stringify(next)})  
     // this.Blogarticles = this.Blogarticles.pipe(
     // startWith(JSON.parse(localStorage[CACHE_KEY] || '{}')))
@@ -73,15 +79,9 @@ Converter(data: any){
 
    }
 
-  if(this.Blogarticles.length > 0)  {
-    this.meta.updateTag({ name: 'description', content: this.Blogarticles[0].blogcategory.seodescription });
-    this.meta.updateTag({ name: 'keywords', content: this.Blogarticles[0].blogcategory.title });
-    this.titleService.setTitle(this.Blogarticles[0].blogcategory.title);
-  }else{
-    this.titleService.setTitle( "Holistic Health & Wellness Center – Bergen County NJ" );
-    this.meta.updateTag({ name: 'description', content: 'Holistic one stop health & wellness center. Feel good inside & out with our integrated services, programs & classes. Our licensed therapists specialize in anxiety, depression, negative body image, eating disorders, & substance addiction. Nutritionists, psychotherapists, massage, yoga, Pilates & more.' });
-    this.meta.updateTag({ name: 'keywords', content: 'Yoga NJ, Yoga Bergen County, Yoga Saddle River NJ, Chiropractor NJ, Chiropractor Bergen County, Nutritionist nj, Nutritionist bergen county nj, Psychotherapy NJ, Psychotherapy in Bergen County NJ, Massage places NJ, Massage Westfield NJ, Massage Fair Lawn NJ, Pilates NJ, Pilates classes Bergen County NJ' });
-}}
+  
+   
+ }
 
 
 

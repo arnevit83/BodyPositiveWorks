@@ -24,7 +24,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-
+import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 
 
 @NgModule({
@@ -46,6 +46,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FormsModule ,
     FontAwesomeModule,
     HttpClientModule ,
+    NgxJsonLdModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [Title, Globals],

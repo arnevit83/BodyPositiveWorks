@@ -4,6 +4,8 @@ import { Meta } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 //import {startWith} from 'rxjs/operators'
 
+import { faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faTag } from '@fortawesome/free-solid-svg-icons';
 import { Globals } from '../../globals';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
@@ -18,11 +20,12 @@ declare var $: any;
   styleUrls: ['./Author.component.scss']
 })
 export class AuthorComponent {
+  faTags = faTag;
   globals: Globals;
   public Blogarticles: any;
   public BlogcategoriesID;
  // public BlogarticlesID;
-
+ faChevronDown = faAngleDoubleLeft;
  public BlogTags = [];
 
 

@@ -1,30 +1,81 @@
-<div class="container" *ngIf="Articles?.length == 0">
+
+
+<div class="container" *ngIf="Blogarticles?.length == 0">
   <div class="row text-center">
     <div class="col-md-8 ml-auto mr-auto"> <br /><br />
       <h2 class="h4fix">
-        No available article found
+        No available articles found
       </h2>
     </div>
   </div>
 </div>
+<div class="container ">
+  <div class="row ml-1 mr-1" *ngIf="Blogarticles?.length > 0">
 
+    <div class="col-lg-9">
+      <div
+        *ngFor="let Blogarticle of Blogarticles;">
+        <div class="card card-blog p-3">
+          <div class="row">
+            <div class="col">
 
-<div class="container">
-    <div class="row text-center">
-      <div class="col-md-8 ml-auto mr-auto"> <br /><br />
-        <h1 class="h2fix">  {{ Articles.title }}
-        </h1><br />
-        <h2 class="h4fix">
-          <div innerHTML="{{ Articles.description }}"> </div>
-          
-    
-        </h2>
+              <span class="d-sm-block d-md-none">
+                <br />
+              </span>
+               <h6 class="card-category text-rose">{{Blogarticles[0].blogcategory.title}}</h6>
 
+              <h3 class="BlogTitle">
+                <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active">{{Blogarticle.title}}</a>
+              </h3>   
+              
+              <p class="author"  *ngIf="Blogarticle.blogauthors">
+                by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name}}"
+                  routerLinkActive="active"><b>{{Blogarticle.blogauthors.name}}</b>
+                </a>, {{Blogarticle.created_at}}
+              </p>
+              <hr>
+              <p class="card-description">
+                <span
+                  innerHTML="{{Blogarticle.description}}">
+                </span>
+             
+              </p>
+           
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-  </div>
+    <div class="col-md-3 col-sm-12 col-xs-12 ">
+          <div class="card card-blog">
+            <div class="row">
+              <div class="col-md-12 m-0 text-center">
+            <a class="btn btn-rose  btn-block m-0" routerLink="/Blog/{{Blogarticles[0].blogcategory.title}}" routerLinkActive="active" ><fa-icon [icon]="faChevronDown"></fa-icon> {{Blogarticles[0].blogcategory.title}}</a>
+          </div>
+        </div>
+      </div>
+
+
+
+     
+      <div class="card card-blog   d-xs-none  d-sm-none  d-md-none d-lg-block" *ngIf="BlogTags?.length > 0">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="h4fix"> Tags</h2>
+            <hr>
+            <div class="row d-flex justify-content-center tags">
+              <div class="col ml-auto mr-auto mb-5 mt-4 ">
+                <a routerLink="/Tag/{{tag}}" routerLinkActive="active" class="badge badge-rose m-1 p-2 " *ngFor="let tag of BlogTags"><fa-icon [icon]="faTags"></fa-icon>&nbsp;&nbsp;{{tag}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
  
+  </div>
 
-
-
+  <ngx-json-ld [json]="schema"></ngx-json-ld>

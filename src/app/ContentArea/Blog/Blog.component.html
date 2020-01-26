@@ -52,13 +52,13 @@
               <h3 class="BlogTitle">
                 <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active">{{Blogarticle.title}}</a>
               </h3>
-              <p class="card-description">
-                <span
-                  innerHTML="{{(Blogarticle.description.length>150)? (Blogarticle.description | slice:0:150)+'..':(Blogarticle.description) }}">
-                </span>
-                <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active"> Read More </a>
+              <p  class="card-description BlogTitle">
+                <a routerLink="/Article/{{ Blogarticle.title }}" routerLinkActive="active" >
+                <span innerHTML="{{(Blogarticle.description.length>200)? (Blogarticle.description | slice:0:200)+'...':(Blogarticle.description) }} <span class='text-rose' > Read More </span>" ></span>
+                </a>  
+                
               </p>
-              <p class="author">
+              <p class="author"  *ngIf="Blogarticle.blogauthors">
                 by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name}}"
                   routerLinkActive="active"><b>{{Blogarticle.blogauthors.name}}</b>
                 </a>, {{Blogarticle.created_at}}
@@ -66,6 +66,12 @@
             </div>
           </div>
         </div>
+
+      </div>
+      <div class="col-lg-12 text-center"><br /><br />
+        <pagination-controls autoHide="true" (pageChange)="p = $event" onclick="$([document.documentElement, document.body]).animate({
+          scrollTop: $('.section').offset().top - 30
+      }, 1000);"></pagination-controls>
       </div>
     </div>
 
@@ -75,14 +81,13 @@
           <div class="col-md-12 text-center">
 
             <h2 class="h4fix"> Featured Posts </h2>
-            <ul  class="list-group author listfeature text-left  align-middle">
+            <ul  class="list-group  listfeature text-left  align-middle">
               <li  class="list-group-item" style="display: block;" *ngFor="let Blogarticle of BlogFeatured">
 
                 <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active">
                   <b style="line-height: 1.4;">{{Blogarticle.title}}</b></a><br />
-                  <sub>by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name}}" routerLinkActive="active">
-                    {{Blogarticle.blogauthors.name}}
-                 </a>, {{Blogarticle.created_at}}</sub>
+                  <sub  class="author"  *ngIf="Blogarticle.blogauthors">by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name}}" routerLinkActive="active">
+                    {{Blogarticle.blogauthors.name}}</a>, {{Blogarticle.created_at}}</sub>
               </li>
           </ul>
         
@@ -94,9 +99,9 @@
           <div class="col-md-12 text-center">
             <h2 class="h4fix"> Tags</h2>
             <hr>
-            <div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-center tags">
               <div class="col ml-auto mr-auto mb-5 mt-4 ">
-                <a routerLink="/Tag/{{tag}}" routerLinkActive="active" class="badge badge-rose m-1 " *ngFor="let tag of BlogTags">{{tag}}</a>
+                <a routerLink="/Tag/{{tag}}" routerLinkActive="active" class="badge badge-rose m-1 p-2 " *ngFor="let tag of BlogTags"><fa-icon [icon]="faTags"></fa-icon>&nbsp;&nbsp;{{tag}}</a>
               </div>
             </div>
           </div>
@@ -106,9 +111,5 @@
       </div>
     </div>
 
-    <div class="col-lg-12 text-center"><br /><br />
-      <pagination-controls autoHide="true" (pageChange)="p = $event" onclick="$([document.documentElement, document.body]).animate({
-        scrollTop: $('.section').offset().top - 30
-    }, 1000);"></pagination-controls>
-    </div>
+
   </div>

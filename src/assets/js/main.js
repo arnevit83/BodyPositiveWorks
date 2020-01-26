@@ -134,7 +134,7 @@ CloseMobilemenu();
     }, 3000);
   };
   window.setTimeout(function() {
-    $("#SliderBanner").children().children().css("display", "block");
+    $("#SliderBanner").children().children().children().css("display", "block");
   }, 2000);
   // $(window).on('hashchange', function(e) {
   //   jQuery(document).ready(function($) {

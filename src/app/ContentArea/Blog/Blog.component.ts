@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Globals } from '../../globals';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
-
+import { faTag } from '@fortawesome/free-solid-svg-icons';
 declare var require: any;
 declare var $: any;
 //const CACHE_KEY = 'HttpBlogCat'
@@ -18,6 +18,7 @@ declare var $: any;
   styleUrls: ['./Blog.component.scss']
 })
 export class BlogComponent {
+  faTags = faTag;
   globals: Globals;
   public Blogarticles: any;
   public BlogFeatured: any;
@@ -57,6 +58,10 @@ Converter(data: any){
    let converter = new showdown.Converter();
    for(let i = 0; i < data.length; i++){
     data[i].description = converter.makeHtml(data[i].description);
+
+
+
+
     //val = $showdown.makeHtml($sanitize(newValue));
     data[i].created_at  =   moment(data[i].StartDateTime).startOf('day').fromNow(); 
 
@@ -85,14 +90,12 @@ BlogFeaturedConverter(data: any){
    moment.locale(); 
    let converter = new showdown.Converter();
    for(let i = 0; i < data.length; i++){
+   
+
     data[i].description = converter.makeHtml(data[i].description);
     //val = $showdown.makeHtml($sanitize(newValue));
     data[i].created_at  =   moment(data[i].StartDateTime).startOf('day').fromNow(); 
-
-  
-
    }
-
  }
 
 

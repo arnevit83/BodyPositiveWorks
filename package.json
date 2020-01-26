@@ -36,6 +36,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.7.1",
     "@nguniversal/express-engine": "^7.1.1",
     "@nguniversal/module-map-ngfactory-loader": "0.0.0",
+    "@ngx-lite/json-ld": "^0.6.2",
     "bootstrap": "^4.2.1",
     "core-js": "^2.6.3",
     "express": "^4.15.2",
