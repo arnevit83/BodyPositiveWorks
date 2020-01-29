@@ -84,7 +84,7 @@ Converter(data: any){
     this.meta.updateTag({ name: 'keywords', content: 'Yoga NJ, Yoga Bergen County, Yoga Saddle River NJ, Chiropractor NJ, Chiropractor Bergen County, Nutritionist nj, Nutritionist bergen county nj, Psychotherapy NJ, Psychotherapy in Bergen County NJ, Massage places NJ, Massage Westfield NJ, Massage Fair Lawn NJ, Pilates NJ, Pilates classes Bergen County NJ' });
 }}
 BlogFeaturedConverter(data: any){
-  this.BlogFeatured = data
+ 
    var showdown  = require('showdown');
    const moment = require('moment');    
    moment.locale(); 
@@ -96,6 +96,7 @@ BlogFeaturedConverter(data: any){
     //val = $showdown.makeHtml($sanitize(newValue));
     data[i].created_at  =   moment(data[i].StartDateTime).startOf('day').fromNow(); 
    }
+   this.BlogFeatured = data
  }
 
 
