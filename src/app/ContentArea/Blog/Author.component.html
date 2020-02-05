@@ -51,7 +51,7 @@
               </h3>
               <p  class="card-description BlogTitle">
                 <a routerLink="/Article/{{ Blogarticle.title }}" routerLinkActive="active" >
-                <span innerHTML="{{(Blogarticle.description.length>200)? (Blogarticle.description | slice:0:200)+'...':(Blogarticle.description) }} <span class='text-rose' > Read More </span>" ></span>
+                <span innerHTML="{{(Blogarticle.description.length>180)? (Blogarticle.description | slice:0:180)+'...':(Blogarticle.description) }} <span class='text-rose' > Read More </span>" ></span>
                 </a>  
               <p class="author">
                 by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name}}"
