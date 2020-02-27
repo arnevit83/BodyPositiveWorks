@@ -65,7 +65,7 @@ export class ArticleComponent implements OnInit {
       });
       this.Backtitle = data[i].title;
       data[i].description = converter.makeHtml(data[i].description);
-      data[i].created_at  =   moment(data[i].StartDateTime).startOf('day').fromNow(); 
+      data[i].created_at  =   moment(data[i].created_at).startOf('day').fromNow(); 
       for(let x = 0; x < data[i].blogtags.length; x++){
         if(this.BlogTags.indexOf(data[i].blogtags[x].tag) === -1) {
           this.BlogTags.push(data[i].blogtags[x].tag);

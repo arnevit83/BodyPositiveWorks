@@ -63,7 +63,7 @@ Converter(data: any){
 
 
     //val = $showdown.makeHtml($sanitize(newValue));
-    data[i].created_at  =   moment(data[i].StartDateTime).startOf('day').fromNow(); 
+    data[i].created_at  =   moment(data[i].created_at).startOf('day').fromNow(); 
 
     for(let x = 0; x < data[i].blogtags.length; x++){
       if(this.BlogTags.indexOf(data[i].blogtags[x].tag) === -1) {
@@ -94,7 +94,7 @@ BlogFeaturedConverter(data: any){
 
     data[i].description = converter.makeHtml(data[i].description);
     //val = $showdown.makeHtml($sanitize(newValue));
-    data[i].created_at  =   moment(data[i].StartDateTime).startOf('day').fromNow(); 
+    data[i].created_at  =   moment(data[i].created_at).startOf('day').fromNow(); 
    }
    this.BlogFeatured = data
  }

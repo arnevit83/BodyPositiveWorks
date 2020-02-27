@@ -68,7 +68,7 @@ Converter(data: any){
    for(let i = 0; i < data.length; i++){
     data[i].description = converter.makeHtml(data[i].description);
     //val = $showdown.makeHtml($sanitize(newValue));
-    data[i].created_at  =   moment(data[i].StartDateTime).startOf('day').fromNow(); 
+    data[i].created_at  =   moment(data[i].created_at).startOf('day').fromNow(); 
 
     for(let x = 0; x < data[i].blogtags.length; x++){
       if(this.BlogTags.indexOf(data[i].blogtags[x].tag) === -1) {
