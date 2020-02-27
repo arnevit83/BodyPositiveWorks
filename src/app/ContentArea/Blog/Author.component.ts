@@ -38,7 +38,7 @@ export class AuthorComponent {
 
     this.route.paramMap.subscribe((params: ParamMap) => {
 
-    this.Blogarticles = params.get('id');
+    this.Blogarticles = params.get('id').split('-').join(' ');
     
     this.http.get(this.globals.CMSURL + "/findCat?blogauthors.name=" + this.Blogarticles + "&_sort=created_at:ASC").subscribe((Blogarticles) => this.Converter(Blogarticles));
    

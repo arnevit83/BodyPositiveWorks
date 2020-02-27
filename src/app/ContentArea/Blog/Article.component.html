@@ -25,11 +25,11 @@
                <h6 class="card-category text-rose">{{Blogarticles[0].blogcategory.title}}</h6>
 
               <h3 class="BlogTitle">
-                <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active">{{Blogarticle.title}}</a>
+                <a routerLink="/Article/{{Blogarticle.title.split(' ').join('-')}}" routerLinkActive="active">{{Blogarticle.title}}</a>
               </h3>   
               
               <p class="author"  *ngIf="Blogarticle.blogauthors">
-                by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name}}"
+                by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name.split(' ').join('-')}}"
                   routerLinkActive="active"><b>{{Blogarticle.blogauthors.name}}</b>
                 </a>, {{Blogarticle.created_at}}
               </p>
@@ -51,7 +51,7 @@
           <div class="card card-blog">
             <div class="row">
               <div class="col-md-12 m-0 text-center">
-            <a class="btn btn-rose  btn-block m-0" routerLink="/Blog/{{Blogarticles[0].blogcategory.title}}" routerLinkActive="active" ><fa-icon [icon]="faChevronDown"></fa-icon> {{Blogarticles[0].blogcategory.title}}</a>
+            <a class="btn btn-rose  btn-block m-0" routerLink="/Blog/{{Blogarticles[0].blogcategory.title.split(' ').join('-')}}" routerLinkActive="active" ><fa-icon [icon]="faChevronDown"></fa-icon> {{Blogarticles[0].blogcategory.title}}</a>
           </div>
         </div>
       </div>
@@ -66,7 +66,7 @@
             <hr>
             <div class="row d-flex justify-content-center tags">
               <div class="col ml-auto mr-auto mb-5 mt-4 ">
-                <a routerLink="/Tag/{{tag}}" routerLinkActive="active" class="badge badge-rose m-1 p-2 " *ngFor="let tag of BlogTags"><fa-icon [icon]="faTags"></fa-icon>&nbsp;&nbsp;{{tag}}</a>
+                <a routerLink="/Tag/{{tag.split(' ').join('-')}}" routerLinkActive="active" class="badge badge-rose m-1 p-2 " *ngFor="let tag of BlogTags"><fa-icon [icon]="faTags"></fa-icon>&nbsp;&nbsp;{{tag}}</a>
               </div>
             </div>
           </div>

@@ -32,7 +32,7 @@
           <div class="row" [ngClass]="{ odd: odd, even: even }">
             <div class="col-md-6 col-lg-6 col-xl-5">
               <div class="card-header card-header-image card-norm ">
-                <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active">
+                <a routerLink="/Article/{{Blogarticle.title.split(' ').join('-')}}" routerLinkActive="active">
                   <picture>
                     <source srcset="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.webp" type="image/webp">
                     <source srcset="{{this.globals.CMSURL}}{{Blogarticle.image.url}}thumbSmall.png" type="image/png">
@@ -50,16 +50,16 @@
               </span>
               <h6 class="card-category text-rose">{{Blogarticles[0].blogcategory.title}}</h6>
               <h3 class="BlogTitle">
-                <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active">{{Blogarticle.title}}</a>
+                <a routerLink="/Article/{{Blogarticle.title.split(' ').join('-')}}" routerLinkActive="active">{{Blogarticle.title}}</a>
               </h3>
               <p  class="card-description BlogTitle">
-                <a routerLink="/Article/{{ Blogarticle.title }}" routerLinkActive="active" >
+                <a routerLink="/Article/{{ Blogarticle.title.split(' ').join('-') }}" routerLinkActive="active" >
                 <span innerHTML="{{(Blogarticle.description.length>180)? (Blogarticle.description | slice:0:180)+'...':(Blogarticle.description) }} <span class='text-rose' > Read More </span>" ></span>
                 </a>  
                 
               </p>
               <p class="author"  *ngIf="Blogarticle.blogauthors">
-                by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name}}"
+                by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name.split(' ').join('-')}}"
                   routerLinkActive="active"><b>{{Blogarticle.blogauthors.name}}</b>
                 </a>, {{Blogarticle.created_at}}
               </p>
@@ -84,9 +84,9 @@
             <ul  class="list-group  listfeature text-left  align-middle">
               <li  class="list-group-item" style="display: block;" *ngFor="let Blogarticle of BlogFeatured">
 
-                <a routerLink="/Article/{{Blogarticle.title}}" routerLinkActive="active">
+                <a routerLink="/Article/{{Blogarticle.title.split(' ').join('-')}}" routerLinkActive="active">
                   <b style="line-height: 1.4;">{{Blogarticle.title}}</b></a><br />
-                  <sub  class="author"  *ngIf="Blogarticle.blogauthors">by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name}}" routerLinkActive="active">
+                  <sub  class="author"  *ngIf="Blogarticle.blogauthors">by&nbsp;<a routerLink="/Author/{{Blogarticle.blogauthors.name.split(' ').join('-')}}" routerLinkActive="active">
                     {{Blogarticle.blogauthors.name}}</a>, {{Blogarticle.created_at}}</sub>
               </li>
           </ul>
@@ -101,7 +101,7 @@
             <hr>
             <div class="row d-flex justify-content-center tags">
               <div class="col ml-auto mr-auto mb-5 mt-4 ">
-                <a routerLink="/Tag/{{tag}}" routerLinkActive="active" class="badge badge-rose m-1 p-2 " *ngFor="let tag of BlogTags"><fa-icon [icon]="faTags"></fa-icon>&nbsp;&nbsp;{{tag}}</a>
+                <a routerLink="/Tag/{{tag.split(' ').join('-')}}" routerLinkActive="active" class="badge badge-rose m-1 p-2 " *ngFor="let tag of BlogTags"><fa-icon [icon]="faTags"></fa-icon>&nbsp;&nbsp;{{tag}}</a>
               </div>
             </div>
           </div>

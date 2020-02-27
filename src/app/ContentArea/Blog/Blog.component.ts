@@ -35,7 +35,7 @@ export class BlogComponent {
 
     this.route.paramMap.subscribe((params: ParamMap) => {
 
-    this.BlogcategoriesID = params.get('id');
+    this.BlogcategoriesID = params.get('id').split('-').join(' ');
     
     
     this.http.get(this.globals.CMSURL + "/findCat?blogcategory.title=" + this.BlogcategoriesID + "&_sort=created_at:ASC").subscribe((Blogarticles) => this.Converter(Blogarticles));

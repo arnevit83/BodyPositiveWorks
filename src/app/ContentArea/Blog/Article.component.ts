@@ -41,7 +41,7 @@ export class ArticleComponent implements OnInit {
   ngOnInit(): void  {
      
     const moment = require('moment');  
-    this.ArticlesID = this.route.snapshot.paramMap.get('id');
+    this.ArticlesID = this.route.snapshot.paramMap.get('id').split('-').join(' ');;
     this.http.get(this.globals.CMSURL + '/findCatFull?title=' + this.ArticlesID + '').subscribe((Articles) => this.Converter(Articles));
 
   }
@@ -65,6 +65,7 @@ export class ArticleComponent implements OnInit {
       });
       this.Backtitle = data[i].title;
       data[i].description = converter.makeHtml(data[i].description);
+      
       data[i].created_at  =   moment(data[i].created_at).startOf('day').fromNow(); 
       for(let x = 0; x < data[i].blogtags.length; x++){
         if(this.BlogTags.indexOf(data[i].blogtags[x].tag) === -1) {

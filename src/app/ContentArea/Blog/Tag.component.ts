@@ -38,7 +38,7 @@ export class TagComponent {
 
     this.route.paramMap.subscribe((params: ParamMap) => {
 
-    this.BlogcategoriesID = params.get('id');
+    this.BlogcategoriesID = params.get('id').split('-').join(' ');
    // this.BlogarticlesID = params.get('aid');
    this.titleService.setTitle( "Holistic Health & Wellness Center – Bergen County NJ" );
    this.meta.updateTag({ name: 'description', content: 'Holistic one stop health & wellness center. Feel good inside & out with our integrated services, programs & classes. Our licensed therapists specialize in anxiety, depression, negative body image, eating disorders, & substance addiction. Nutritionists, psychotherapists, massage, yoga, Pilates & more.' });
