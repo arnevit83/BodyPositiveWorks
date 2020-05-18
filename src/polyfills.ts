@@ -87,3 +87,20 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+declare global {
+
+
+}
+
+declare global {
+    interface Window {
+
+        ShopifyBuy: {
+            UI: any;
+            buildClient: any;
+          }}
+  
+
+}
+
+

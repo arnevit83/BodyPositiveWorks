@@ -44,11 +44,13 @@ import { ArticleComponent } from './ContentArea/Blog/Article.component';
 import { AuthorComponent } from './ContentArea/Blog/Author.component';
 import { TagComponent } from './ContentArea/Blog/Tag.component';
 
-
+import { ShopComponent } from './ContentArea/Shop/Shop.component';
 
 
 
 const routes: Routes = [{ path: '', component: HomeComponent },
+
+{ path: 'Shop', component: ShopComponent },
 
 { path: 'Services/Yoga', component: YogaComponent },
 { path: 'Services/Psychotherapy', component: PsychotherapyComponent },
@@ -59,7 +61,7 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'Services/Massage', component: MassageComponent },
 { path: 'Services/Meditation', component: MeditationComponent },
 { path: 'Services/Body-Therapy', component: BodyworkComponent },
-{ path: 'Services/Chiropractic', component: ChiropracticComponent },
+
 { path: 'Services/Ayurveda', component: AyurvedaComponent },
 { path: 'Services/Art-Therapy', component: ArtTherapyComponent },
 
@@ -106,6 +108,7 @@ export class AppRoutingModule { }
 export const routingComponents = [
 
     YogaComponent,
+    ShopComponent,
     ArtTherapyComponent,
     AyurvedaComponent,
     ChiropracticComponent,
