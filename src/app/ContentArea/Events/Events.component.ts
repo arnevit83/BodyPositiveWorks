@@ -29,7 +29,7 @@ export class EventsComponent {
 
   ngOnInit(): void {
     const moment = require('moment');  
-    
+    console.warn(this.globals.CMSURL + "/categories?events.id_gte=1&_sort=CategoryTitle:ASC&events.StartDateTime_gte=" + moment().format('YYYY-MM-DD'))
     this.http.get(this.globals.CMSURL + "/categories?events.id_gte=1&_sort=CategoryTitle:ASC&events.StartDateTime_gte=" + moment().format('YYYY-MM-DD'))
     .subscribe((services) => this.services = services );
 

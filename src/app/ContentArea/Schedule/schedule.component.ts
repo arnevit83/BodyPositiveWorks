@@ -60,5 +60,4 @@ export class ScheduleComponent  {
         .subscribe((events) => this.Converter(events));
       }
   }
- 
 }
