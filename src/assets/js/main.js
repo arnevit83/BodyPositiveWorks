@@ -170,12 +170,7 @@ CloseMobilemenu();
     $('.ScrollUp').fadeIn();
     return false;
   });
-  $('.gallery-feed').spectragram('getUserFeed', {
-    complete: galleryfeedkFunc(),
-    max: 8,
-    size: "small",
-    wrapEachWith: "<div class='IGFeed'></div>"
-  });
+
   // Rightmenu();
 
 

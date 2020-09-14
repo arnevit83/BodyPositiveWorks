@@ -16,7 +16,6 @@ import { MeditationComponent } from './ContentArea/Services/meditation/meditatio
 import { BodyworkComponent } from './ContentArea/Services/Bodywork/Bodywork.component';
 import { ChiropracticComponent } from './ContentArea/Services/chiropractic/chiropractic.component';
 import { AyurvedaComponent } from './ContentArea/Services/ayurveda/ayurveda.component';
-import { ArtTherapyComponent } from './ContentArea/Services/art-therapy/art-therapy.component';
 
 import { NegativeBodyImageComponent } from './ContentArea/Expertise/negative-body-image/negative-body-image.component';
 import { EatingDisordersComponent } from './ContentArea/Expertise/eating-disorders/eating-disorders.component';
@@ -32,7 +31,7 @@ import { CommunityComponent } from './ContentArea/Community/community.component'
 import { OutreachComponent } from './ContentArea/Outreach/outreach.component';
 
 import { ContactUsComponent } from './ContentArea/Aboutus/contact-us/contact-us.component';
-import { FoundersBiosComponent } from './ContentArea/Aboutus/founders-bios/founders-bios.component';
+
 import { OurMissionComponent } from './ContentArea/Aboutus/our-mission/our-mission.component';
 import { TestimonialsComponent } from './ContentArea/Aboutus/testimonials/testimonials.component';
 
@@ -63,7 +62,7 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'Services/Body-Therapy', component: BodyworkComponent },
 
 { path: 'Services/Ayurveda', component: AyurvedaComponent },
-{ path: 'Services/Art-Therapy', component: ArtTherapyComponent },
+
 
 { path: 'Expertise/Negative-Body-Image', component: NegativeBodyImageComponent },
 { path: 'Expertise/Eating-Disorders', component: EatingDisordersComponent },
@@ -79,7 +78,6 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'Outreach', component: OutreachComponent },
 
 { path: 'About-Us/Contact-Us', component: ContactUsComponent },
-{ path: 'About-Us/Founders-Bios', component: FoundersBiosComponent },
 { path: 'About-Us/Our-Mission', component: OurMissionComponent },
 { path: 'About-Us/Testimonials', component: TestimonialsComponent },
 
@@ -109,7 +107,6 @@ export const routingComponents = [
 
     YogaComponent,
     ShopComponent,
-    ArtTherapyComponent,
     AyurvedaComponent,
     ChiropracticComponent,
     BodyworkComponent,
@@ -127,7 +124,6 @@ export const routingComponents = [
     UseOurSpaceComponent,
     MassageComponent,
     ContactUsComponent,
-    FoundersBiosComponent,
     OurMissionComponent,
     TestimonialsComponent,
     OutreachComponent,
