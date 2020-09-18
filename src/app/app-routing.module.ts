@@ -71,7 +71,7 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'Expertise/Addiction', component: AddictionComponent },
 
 { path: 'Community/Use-Our-Space', component: UseOurSpaceComponent },
-{ path: 'Pricing/Pricing-And-Bundles', component: PricingAndBundlesComponent },
+{ path: 'Pricing', component: PricingAndBundlesComponent },
 
 { path: 'Community', component: CommunityComponent },
 

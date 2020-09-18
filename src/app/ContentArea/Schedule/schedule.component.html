@@ -100,6 +100,7 @@
                           <hr><br />
                    
                   </div>
+              
 
                   <div class="col-lg-12"><br /><br />
                     <pagination-controls (pageChange)="p = $event" onclick="$('.EventDescription').readmore({ speed: 75, lessLink: '<a href=”#” >Hide Details</a>', moreLink: '<a href=”#” >View Details</a>' ,collapsedHeight: 28});$([document.documentElement, document.body]).animate({
@@ -112,6 +113,14 @@
 
 
             </div>
+
+
+            <div  class="row"  *ngIf="events?.length == 0">
+              <br />  <span class="text-center">Coming soon <br /><br /></span> <br />
+              </div>
+
+
+
               </div>
        
             </div>
