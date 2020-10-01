@@ -163,6 +163,7 @@ CloseMobilemenu();
       $(this).removeClass('shadow')
     }
   )
+
   $('.ScrollUp').click(function() {
     $('html, body').animate({
       scrollTop: 0
