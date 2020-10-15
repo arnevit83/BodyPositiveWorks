@@ -38,11 +38,8 @@ export class BlogComponent {
     this.BlogcategoriesID = params.get('id').split('-').join(' ');
     
     
-    this.http.get(this.globals.CMSURL + "/findCat?blogcategory.title=" + this.BlogcategoriesID + "&_sort=created_at:ASC").subscribe((Blogarticles) => this.Converter(Blogarticles));
-
-    this.http.get(this.globals.CMSURL + "/findFeaturedCat?featured=1&_sort=created_at:ASC").subscribe((BlogFeatured) => this.BlogFeaturedConverter(BlogFeatured));
-
- 
+    this.http.get(this.globals.CMSURL + "/findCat?blogcategory.title=" + this.BlogcategoriesID + "&_sort=created_at:DESC").subscribe((Blogarticles) => this.Converter(Blogarticles));
+    this.http.get(this.globals.CMSURL + "/findFeaturedCat?featured=1&_sort=created_at:DESC").subscribe((BlogFeatured) => this.BlogFeaturedConverter(BlogFeatured)); 
 
   }); 
 

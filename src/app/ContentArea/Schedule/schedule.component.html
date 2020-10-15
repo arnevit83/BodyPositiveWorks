@@ -86,7 +86,12 @@
                
                       <div class="col-lg-12" *ngFor="let event of events| paginate: { itemsPerPage: 10, currentPage: p }">
                           <div class="media-body">
-                              <h4 class="media-heading text-rose ">{{event.Title}} <a target="_blank" href="{{event.URL}}" class="btn btn-rose float-right">Sign up</a></h4>
+
+                            <h4 *ngIf="event.URL?.length == 0" class="media-heading text-rose ">{{event.Title}}    
+                                
+                              <a target="_blank" href="{{event.URL}}" class="btn btn-rose float-right">Sign up</a>
+                            
+                            </h4>
                                <div *ngFor="let cat of event.categories;let i = index">
                               <span class="badge badge-pill badge-rose float-left mr-1">{{cat.CategoryTitle}}</span>
                               </div>
