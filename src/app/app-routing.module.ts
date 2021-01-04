@@ -24,6 +24,9 @@ import { AnxietyComponent } from './ContentArea/Expertise/anxiety/anxiety.compon
 import { AddictionComponent } from './ContentArea/Expertise/addiction/addiction.component';
 
 import { UseOurSpaceComponent } from './ContentArea/Community/UseOurSpace/UseOurSpace.component';
+import { WorkshopsComponent } from './ContentArea/Services/Workshops/Workshops.component';
+
+
 import { PricingAndBundlesComponent } from './ContentArea/Pricing/pricing-and-bundles/pricing-and-bundles.component';
 
 import { CommunityComponent } from './ContentArea/Community/community.component';
@@ -71,6 +74,8 @@ const routes: Routes = [{ path: '', component: HomeComponent },
 { path: 'Expertise/Addiction', component: AddictionComponent },
 
 { path: 'Community/Use-Our-Space', component: UseOurSpaceComponent },
+{ path: 'Services/Workshops', component: WorkshopsComponent },
+
 { path: 'Pricing', component: PricingAndBundlesComponent },
 
 { path: 'Community', component: CommunityComponent },
@@ -134,5 +139,6 @@ export const routingComponents = [
     BlogComponent,
     ArticleComponent,
     TagComponent,
-    AuthorComponent
+    AuthorComponent,
+    WorkshopsComponent
 ]

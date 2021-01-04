@@ -48,9 +48,16 @@ export class HeaderComponent {
         if (currentRoute.split("/").slice(-2).toString() == ""){
           currentRoute="Body Positive Works";
         }
-
+   
+       
+        if (currentRoute.toString() == "/Services/Workshops"){
+          currentRoute="BE THE SHIFT";
+          this.TitleSubText = 'Workshops'
+        }
         this.TitleText = replaceAll('%20', ' ',replaceAll('-', ' ',currentRoute.split("/").slice(-1).toString()));
-    
+       
+       
+
       }
       function replaceAll(find, replace, str)
       {
