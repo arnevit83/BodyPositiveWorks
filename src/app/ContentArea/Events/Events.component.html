@@ -57,8 +57,8 @@
 
 
                               <h4 class="media-heading text-rose ">{{event.Title}}    
-                                
-                                <a  *ngIf="event.URL?.length == 0"  target="_blank" href="{{event.URL}}" class="btn btn-rose float-right">Sign up</a>
+                        
+                                <a  *ngIf="event.URL?.length != 0"  target="_blank" href="{{event.URL}}" class="btn btn-rose float-right">Sign up</a>
                               
                               </h4>
                               <div *ngFor="let cat of event.categories;let i = index">
